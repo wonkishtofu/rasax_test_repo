@@ -1,0 +1,13 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 5f5c3dd763c0479d92ae715ad95a4658
+  steps:
+  - intent: faq/FAQ-using RFP and not tenders
+  - action: utter_faq
+  - action: utter_faq/FAQ-using RFP and not tenders
+  - action: utter_faq/FAQ-using RFP and not tenders
+rules:
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
