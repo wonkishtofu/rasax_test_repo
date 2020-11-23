@@ -1,7 +1,205 @@
 ## intent:greet
-- Hi
 - hi
-- hello
+- Good morning
+- good afternoon
+- hey there
+- hello there
+- hihi
+- hi!
+- hi there
+- hihi!
+- hey there!
+- good morning
+- hi there!
+- moorning
+- hi there!!!!
+- good evening
+- evening!
+- Hey
+- Hello
+- hey
+- hey hey
+- good morning!
+- morning!
+- Hello :)
+- Halp me
+- hello :D
+- hello here. today is 6th october
+- heyhey
+
+## intent:closing no more question
+- Nope. Thank you!
+- ok thank you!
+- nope, thanks!
+
+## intent:glossary_2
+- What is the instruction manual (IM) on Procurement?
+- what is an instruction manual?
+- what is the instruction manual about?
+
+## intent:glossary_24
+- What is a PSPC (Public Sector Panel of Consultants)?
+- What do the consultants do?
+
+## intent:glossary_25
+- How can I Request for Information (RFI)?
+
+## intent:glossary_27
+- what is svp?
+- What is a Small Value Purchase?
+
+## intent:glossary_26
+- What is Request for Proposal (RFP)?
+- How do I do my request for proposal?
+
+## intent:glossary_28
+- How do I do quotation?
+- What is ITQ?
+
+## intent:glossary_29
+- How do I do tenders?
+- What is ITT?
+
+## intent:glossary_30
+- What are the mandatory DA contracts?
+
+## intent:glossary_31
+- what are some special procurement procedures?
+
+## intent:glossary_32
+- What constitutes an emergency procurement?
+
+## intent:glossary_3
+- What are Demand Aggregation Contracts?
+- What are DA contracts?
+- What are demand aggregation contracts?
+- what are DA contracts?
+- what are demand aggregation contracts?
+
+## intent:glossary_4
+- What is EPV?
+- What is an estimated procurement value?
+- what is estimated procurement value?
+- what is an EPV?
+
+## intent:glossary_5
+- What is approved procurement value?
+- What is an APV?
+- what is an approved procurement value?
+
+## intent:glossary_6
+- What is the tender evaluation committee?
+- Whos in the TEC?
+- what is the TEC supposed to do?
+- who are the TEC?
+- who are the tender evaluation committee?
+
+## intent:glossary_7
+- What is [FOM 401](subject)?
+- Why do I keep seeing [401](subject)?
+- What does [FOM401](subject) mean?
+- what is [FOM 401](subject)?
+- what [will happen](context) if i [know a bidder](subject)?
+
+## intent:glossary_8
+- What is [FOM 510](subject)?
+- Why do I keep seeing [510](subject)?
+- What does [FOM510](subject) mean?
+- what is [FOM 510](subject)?
+
+## intent:glossary_9
+- What is FOM 520?
+- Why do I keep seeing 520?
+- What does FOM520 mean?
+- what is FOM 520?
+
+## intent:glossary_10
+- What is FOM 550?
+- Why do I keep seeing FOM 550?
+- What does FOM 550 mean?
+- FOM 550 and revenue link?
+- what is FOM 550?
+
+## intent:glossary_11
+- What is a Letter of Acceptance (LOA)?
+- what is an LOA?
+- What is a letter of acceptance?
+
+## intent:glossary_12
+- How do I know if my procurement is considered covered?
+- Is my GPA tender covered?
+- Is my FTA tender covered?
+- How to tell if my GPA/FTA tenders is covered?
+- What is a GPA covered tender?
+- what is a FTA covered tender?
+
+## intent:glossary_13
+- What about the world trade organisation agreement on government procurement?
+- What is the WTO-GPA?
+- what is a WTO-GPA?
+
+## intent:glossary_14
+- What is free trade agreement?
+- What is FTA?
+- What does the Free Trade Agreement (FTA) mean?
+- what are free trade agreements?
+- what is FTA?
+- what is fta
+
+## intent:glossary_15
+- What is 2-stage tendering?
+- 2 stage procedure for tendering?
+- what is the 2-stage tendering?
+
+## intent:glossary_16
+- What is a consortium?
+- what is a consortium?
+
+## intent:glossary_17
+- What is debarment?
+- Debarment meaning?
+
+## intent:glossary_18
+- What is novation?
+- meaning of novation?
+
+## intent:glossary_19
+- What is a security deposit (SD)?
+- What is SD?
+
+## intent:glossary_20
+- What does selective tender mean?
+- tell me about selective tender
+
+## intent:glossary_21
+- What are liquidated damages?
+
+## intent:glossary_22
+- What is the price-quality method (PQM) about?
+
+## intent:glossary_23
+- What is the quality-fee selection method (QFM)?
+
+## intent:faq/FAQ-Government Procuring Entities (GPEs)
+- Which are the Government Procuring Entities (GPEs)?
+
+## intent:faq/FAQ-approving award of quotation
+- Who can approve award of the quotation?
+
+## intent:faq/FAQ-approving award of tender
+- Who can approve award of the tender?
+
+## intent:faq/FAQ-approving exercise of option
+- Who can approve exercise of option?
+
+## intent:faq/FAQ-difference between period contract and framework agreement
+- What is the difference between Period Contract and Framework Agreement?
+
+## intent:faq/FAQ-procurement for food catering services
+- I need to procure food catering services. How to go about the procurement?
+
+## intent:faq/FAQ-mandatory to book venues with Green mark Certification
+- Is it mandatory to book venues with Green mark Certification?
 
 ## intent:faq/FAQ-expenditurepapersendwhere
 - Should I send my expenditure paper to Finance for Dir(Fin)'s support?
@@ -18,23 +216,27 @@
 ## intent:faq/FAQ-Sponsorship subject to IM
 - Sponsorship is subject to IM on Procurement?
 
-## intent:faq/FAQ-rules for giving honorarium
+## intent:faq_m/FAQ-rules for giving honorarium
 - We intend to give an honorarium to a guest speaker for a conference. Would we have to follow the rules in the IM on Procurement?
 
-## intent:faq/FAQ-approval process honorarium
+## intent:faq_m/FAQ-approval process honorarium
 - How is the approval process for honorarium?
 
 ## intent:faq/FAQ-considerations for proc of G+S
-- What are the other key considerations in the procurement of goods and services?
+- What are the other [key considerations](context) in the [procurement](subject) of [goods and services](context)?
+- What are the [key considerations](context) for the procurement of [goods and services](context)?
+- What should i [take note](context)  of for the [procurement](subject) of [goods and services](context)?
 
 ## intent:faq/FAQ-factors for proc of high-end G+S
-- If my procurement is for niche or high-end products or services, what are the factors I should consider?
+- If my [procurement](subject) is for [niche](adjective) or [high-end](adjective) products or services, what are the [factors](context) I should consider?
+- What should i consider for [procurement](subject) of very [pricey](adjective) products or services?
+- Considerations for [procurement](subject)  of [high end](adjective) products.
 
 ## intent:faq/FAQ-Conflict of Interest
 - When constitutes Conflict of Interest?
 - what is a conflict of interest?
 
-## intent:faq/FAQ-using RFP and not tenders
+## intent:faq_m/FAQ-using RFP and not tenders
 - Since Request for Proposal (RFP) gives more flexibility, can I opt to use only RFP and not tenders?
 
 ## intent:faq/FAQ-is purchase (SVP) if below $6000
@@ -254,3 +456,8 @@
 
 ## intent:faq/FAQ-A74
 - Understand that star rates should not form bulk of the valuation of works in the contract. What is meant by 'bulk' of valuation of contract works or 'substantial' percentage of works being valued as star rate items? What would be the correct quantum to ascertain these?
+
+## synonym:expensive
+- high end
+- high-end
+- pricey

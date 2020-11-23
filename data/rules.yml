@@ -1,13 +1,233 @@
 version: "2.0"
 stories:
-- story: Story from Conversation ID 5f5c3dd763c0479d92ae715ad95a4658
+- story: SVP
   steps:
-  - intent: faq/FAQ-using RFP and not tenders
-  - action: utter_faq
-  - action: utter_faq/FAQ-using RFP and not tenders
-  - action: utter_faq/FAQ-using RFP and not tenders
+  - intent: glossary_27
+  - action: utter_glossary_27
+  - action: utter_glossary_27_1
+  - action: utter_glossary_27_2
+  - action: utter_closing
+- story: Instruction Manual (IM) on Procurement
+  steps:
+  - intent: glossary_2
+  - action: utter_glossary_2
+  - action: utter_closing
+- story: Demand Aggregation (DA) Contracts
+  steps:
+  - intent: glossary_3
+  - action: utter_glossary_3
+  - action: utter_glossary_3_1
+  - action: utter_closing
+- story: Estimated Procurement Value (EPV)
+  steps:
+  - intent: glossary_4
+  - action: utter_glossary_4
+  - action: utter_closing
+- story: Approved Procurement Value (APV)
+  steps:
+  - intent: glossary_5
+  - action: utter_glossary_5
+  - action: utter_closing
+- story: Tender Evaluation Committee (TEC)
+  steps:
+  - intent: glossary_6
+  - action: utter_glossary_6
+  - action: utter_closing
+- story: FOM 401
+  steps:
+  - intent: glossary_7
+  - action: utter_glossary_7
+  - action: utter_glossary_7_1
+  - action: utter_closing
+- story: FOM 510
+  steps:
+  - intent: glossary_8
+  - action: utter_glossary_8
+  - action: utter_glossary_8_1
+  - action: utter_glossary_8_2
+  - action: utter_glossary_8_3
+  - action: utter_glossary_8_4
+  - action: utter_closing
+- story: FOM 520
+  steps:
+  - intent: glossary_9
+  - action: utter_glossary_9
+  - action: utter_glossary_9_1
+  - action: utter_glossary_9_2
+  - action: utter_closing
+- story: FOM 550
+  steps:
+  - intent: glossary_10
+  - action: utter_glossary_10
+  - action: utter_glossary_10_1
+  - action: utter_glossary_10_2
+  - action: utter_glossary_10_3
+  - action: utter_glossary_10_4
+  - action: utter_closing
+- story: Letter of Acceptance (LOA)
+  steps:
+  - intent: glossary_11
+  - action: utter_glossary_11
+  - action: utter_closing
+- story: GPA/FTA covered tenders
+  steps:
+  - intent: glossary_12
+  - action: utter_glossary_12
+  - action: utter_glossary_12_1
+  - action: utter_glossary_12_2
+  - action: utter_glossary_12_3
+  - action: utter_closing
+- story: World Trade Organisation - Agreement on Government Procurement (WTO-GPA)
+  steps:
+  - intent: glossary_13
+  - action: utter_glossary_13
+  - action: utter_closing
+- story: Free Trade Agreement (FTA)
+  steps:
+  - intent: glossary_14
+  - action: utter_glossary_14
+  - action: utter_glossary_14_1
+  - action: utter_closing
+- story: 2-Stage Tendering
+  steps:
+  - intent: glossary_15
+  - action: utter_glossary_15
+  - action: utter_glossary_15_1
+  - action: utter_closing
+- story: Consortium
+  steps:
+  - intent: glossary_16
+  - action: utter_glossary_16
+  - action: utter_closing
+- story: Debarment
+  steps:
+  - intent: glossary_17
+  - action: utter_glossary_17
+  - action: utter_closing
+- story: Novation
+  steps:
+  - intent: glossary_18
+  - action: utter_glossary_18
+  - action: utter_closing
+- story: Security Deposit (SD)
+  steps:
+  - intent: glossary_19
+  - action: utter_glossary_19
+  - action: utter_glossary_19_1
+  - action: utter_closing
+- story: Selective Tender (SD)
+  steps:
+  - intent: glossary_20
+  - action: utter_glossary_20
+  - action: utter_glossary_20_1
+  - action: utter_closing
+- story: Liquidated damage (LD)
+  steps:
+  - intent: glossary_21
+  - action: utter_glossary_21
+  - action: utter_closing
+- story: Price-Quality Method (PQM)
+  steps:
+  - intent: glossary_22
+  - action: utter_glossary_22
+  - action: utter_closing
+- story: Quality-Fee selection method (QFM)
+  steps:
+  - intent: glossary_23
+  - action: utter_glossary_23
+  - action: utter_closing
+- story: Public Sector Panel of Consultants (PSPC)
+  steps:
+  - intent: glossary_24
+  - action: utter_glossary_24
+  - action: utter_glossary_24_1
+  - action: utter_closing
+- story: Request for Information (RFI)
+  steps:
+  - intent: glossary_25
+  - action: utter_glossary_25
+  - action: utter_closing
+- story: Request for Proposal (RFP)
+  steps:
+  - intent: glossary_26
+  - action: utter_glossary_26
+  - action: utter_glossary_26_1
+  - action: utter_closing
+- story: Small Value Purchase (glossary_27)
+  steps:
+  - intent: glossary_27
+  - action: utter_glossary_27
+  - action: utter_glossary_27_1
+  - action: utter_glossary_27_2
+  - action: utter_closing
+- story: Quotation
+  steps:
+  - intent: glossary_28
+  - action: utter_glossary_28
+  - action: utter_glossary_28_1
+  - action: utter_glossary_28_2
+  - action: utter_closing
+- story: Tender
+  steps:
+  - intent: glossary_29
+  - action: utter_glossary_29
+  - action: utter_glossary_29_1
+  - action: utter_closing
+- story: Mandatory DA contracts
+  steps:
+  - intent: glossary_30
+  - action: utter_glossary_30
+  - action: utter_glossary_30_1
+  - action: utter_closing
+- story: Special Procurement Procedures
+  steps:
+  - intent: glossary_31
+  - action: utter_glossary_31
+  - action: utter_glossary_31_1
+  - action: utter_glossary_31_2
+  - action: utter_closing
+- story: Eergency procurement
+  steps:
+  - intent: glossary_32
+  - action: utter_glossary_32
+  - action: utter_glossary_32_1
+  - action: utter_glossary_32_2
+  - action: utter_glossary_32_3
+  - action: utter_closing
+- story: A series of queries
+  steps:
+  - intent: glossary_27
+  - action: utter_glossary_27
+  - action: utter_glossary_27_1
+  - action: utter_glossary_27_2
+  - action: utter_closing
+  - intent: glossary_14
+  - action: utter_glossary_14
+  - action: utter_glossary_14_1
+  - action: utter_closing
+  - intent: glossary_2
+  - action: utter_glossary_2
+  - action: utter_closing
+  - intent: glossary_3
+  - action: utter_glossary_3
+  - action: utter_glossary_3_1
+  - action: utter_closing
+  - intent: closing no more questions
+  - action: utter_closing_goodbye
+  - intent: greet
+  - action: utter_greet
+  - intent: closing no more questions
+  - action: utter_closing
+  - intent: closing no more questions
+  - action: utter_closing_goodbye
 rules:
 - rule: respond to FAQs
   steps:
   - intent: faq
   - action: utter_faq
+- rule: respond to FAQs with multiple utterance
+  steps:
+  - intent: faq_m
+  - action: utter_faq_m
+  - action: utter_faq_m1
+  - action: utter_faq_m2

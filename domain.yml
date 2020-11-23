@@ -1,855 +1,1102 @@
-version: "2.0"
-
 session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: false
-  
 intents:
-  - faq
-  - greet
-
+- closing no more question
+- glossary_2
+- glossary_24
+- glossary_25
+- glossary_27
+- glossary_26
+- glossary_28
+- glossary_29
+- glossary_30
+- glossary_12
+- glossary_15
+- glossary_16
+- glossary_22
+- glossary_31
+- glossary_32
+- glossary_4
+- glossary_5
+- glossary_6
+- glossary_8
+- glossary_10
+- glossary_14
+- glossary_20
+- glossary_23
+- glossary_3
+- glossary_7
+- glossary_9
+- glossary_11
+- glossary_18
+- glossary_13
+- glossary_21
+- glossary_17
+- glossary_19
+- faq_m
+- faq
+- greet
+entities:
+- subject
+- context
+- adjective
 responses:
-  utter_greet: 
-  - text: "HiHi"
-  
-  utter_faq/FAQ-expenditurepapersendwhere: 
-  - text: >
-      Please refer to the table to determine whether support from Dir(Fin) is
-      required. The expenditure paper should be vetted by your team lead or Director
-      before it is sent to Finance for support. Please send the paper to Dir(Fin)
-      and cc your group’s Finance Manager and Procurement Manager.
-  
-  utter_faq/FAQ-SVPquotes: 
-  - text: > 
-      IM on Procurement does not mandate the need for 3 quotes.</br></br> However,
-      assessment of the reasonableness of the price(s) quoted is still required.
-      Assessment may be based on verbal or written quotes, recent purchases, suppliers'
-      published rates, or any other source of reliable information (e.g. flyers,
-      Internet, newspapers). You can also use GeBIZ Mall or call quotations through
-      GeBIZ."
+  utter_greet:
+  - buttons:
+    - payload: Sure!
+      title: Sure!
+    - payload: I get it, skip!
+      title: I get it, skip!
+    text: "Hello! I’m Procurement Chatbot and still in beta testing. I can provide\
+      \ advisory services on how to carry out procurement of your required goods and\
+      \ services. There are few ways to interact with me. Want to see a brief tutorial\
+      \ of what I can do?\n"
+  utter_closing_goodbye:
+  - text: Thanks and have a nice day!
+  utter_closing:
+  - buttons:
+    - payload: I have no further question
+      title: I have no further question
+    - payload: I need clarifications with the Procurement Manager
+      title: I need clarifications with the Procurement Manager
+    text: Do you have any further questions?
+  utter_closing_noanswer:
+  - text: "\"Sorry I’m still learning and unable to answer your question. Please rephrase\
+      \ your question or would you like to contact the Procurement Manager?\n"
+  utter_glossary_3:
+  - text: "Demand Aggregation (DA) contracts are existing WOG or URA period contracts\
+      \ for commonly purchased goods or services that you can ride on to achieve procurement\
+      \ efficiency and value for money through economies of scale. Examples of WOG\
+      \ DA contracts are food catering, hiring of buses and booking of event venues,\
+      \ and URA period contracts include exhibition set-up.\n"
+  utter_glossary_3_1:
+  - text: "Refer to the \"Guide on checking for Demand Aggregation (DA) and URA period\
+      \ contracts\" for step-by-step guide to check whether your intended procurement\
+      \ is covered under the DA contracts.\n"
+  utter_glossary_5:
+  - text: "Approved Procurement Value (APV) is defined as the total sum, inclusive\
+      \ of contract options, possible contract extensions and contingencies put forward\
+      \ to the relevant Quotation Approving Authority (QAA) or Tender Approving Authority\
+      \ (TAA) for approval.\n"
+  utter_glossary_6:
+  - text: "Tender Evaluation Committee (TEC) is formed to evaluate tenders. The composition\
+      \ of the TEC should be decided based on the complexities and type of expertise\
+      \ required for the project. In general, the TEC comprises 3 members.\n"
+  utter_glossary_7:
+  - text: FOM 401 defines the authority to incur expenditure.
+  utter_glossary_7_1:
+  - text: "Director: Up to $30,000</br> Senior Director: Up to $80,000</br> Group\
+      \ Director: Up to $150,000</br> DCEO: Up to $500,000</br> CEO: Up to $1mil</br>\
+      \ Chairman: Up to $10mil</br> Board: Exceeding $10mil\n"
+  utter_glossary_8:
+  - text: "FOM 510 defines the authority to approve expenditure quotations, tenders\
+      \ and request for proposals.\n"
+  utter_glossary_8_1:
+  - text: "Quotation Approving Authority (up to $90,000): </u></br> 2 members – Director\
+      \ or Senior Director (one member to be from Department concerned)\n"
+  utter_glossary_8_2:
+  - text: "Tenders Board A (up to $1 mil): </u></br> Chairman – DCEO;  2 members –\
+      \ Group Director (one member to be from Department concerned)\n"
+  utter_glossary_8_3:
+  - text: "Tenders Board B (up to $10 mil)</u></br> Chairman – CEO;  2 members – DCEO\
+      \ or Group Director (one member to be from Department concerned)\n"
+  utter_glossary_8_4:
+  - text: "Tenders Board C (exceeding $10 mil): </u></br> The Authority (i.e. URA\
+      \ Board)\n"
+  utter_glossary_9:
+  - text: FOM 520 defines the authority to approve variation of contracts.
+  utter_glossary_9_1:
+  - text: "Director: Up to $30,000 (not applicable for consultancy services)</br>\
+      \ Senior Director: Up to $80,000 (not applicable for consultancy services) )\
+      \ </br> Group Director: Up to $150,000</br> DCEO: Up to $500,000</br> CEO: Up\
+      \ to $1mil</br> Chairman: Up to $10mil</br> Board: Exceeding $10mil\n"
+  utter_glossary_9_2:
+  - text: "Variations for consultancy services contract shall minimally be approved\
+      \ by Group Director.</br> For contracts with approved procurement value above\
+      \ $80,000, variations with no change to the contract sum (e.g. changes to contractual\
+      \ terms and conditions, extension of completion date, changes to payment terms\
+      \ and schedule) shall be approved by Group Director or above.\n"
+  utter_glossary_10:
+  - text: "FOM 550 defines the authority to approve revenue quotations and tenders\
+      \ (except state land sales).\n"
+  utter_glossary_10_1:
+  - text: "Quotation Approving Authority: Up to $90,000</u></br> Comprises 2 members\
+      \ – Director or Senior Director (one member to be from Department concerned)\n"
+  utter_glossary_10_2:
+  - text: "Tenders Board A: Up to $1mil</u></br> Chairman – DCEO</br> 2 members –\
+      \ Group Director (one member to be from Department concerned)\n"
+  utter_glossary_10_3:
+  - text: "Tenders Board B: Up to $10mil</u></br> Chairman – CEO</br> 2 members –\
+      \ DCEO or Group Director (one member to be from Department concerned)\n"
+  utter_glossary_10_4:
+  - text: '<u>Tenders Board C: Exceeding $10mil</u></br> The Authority'
+  utter_glossary_11:
+  - text: "A Letter of Acceptance signifies the acceptance of the offer made by the\
+      \ Tenderer and creates a binding contract between the Government Procuring Entities\
+      \  (GPE) and successful Tenderer.\n"
+  utter_glossary_12:
+  - text: "To determine if a particular procurement is considered covered, the following\
+      \ conditions are to be fulfilled:\n"
+  utter_glossary_12_1:
+  - text: "1. Entity: Central government entities such as Ministries, Organs of State\
+      \ and certain Statutory Boards (which include URA)\n"
+  utter_glossary_12_2:
+  - text: "2. All goods are covered. For services, you could check the <a target='_blank'\
+      \ https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/Appendix-S2-5-DETAILS-OF-SERVICES-AND-CONSTRUCTIO.aspx\
+      \ GPA</a> and  <a target='_blank' https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/Appendix-S2-6-COMMITMENTS-UNDER-THE-UNITED-STATES.aspx\
+      \ FTA</a> if they are covered in the list.\n"
+  utter_glossary_12_3:
+  - text: "3. The threshold value of procurement that would be covered are as follows\
+      \ from 1 Jan 2020 to 31 Dec 2021:-</br> (i) Goods and Services: S$760,640</br>\
+      \ (ii) Construction Services: S$9,508,000\n"
+  utter_glossary_13:
+  - text: "The Agreement on Government Procurement (GPA) allows Singapore companies\
+      \ access to government procurement markets of those countries which are also\
+      \ in the Agreement. The two main principles of the WTO-GPA are non-discrimination\
+      \ which implies that no preferential treatment should be given to local suppliers,\
+      \ and transparency which indicates that all aspects of the procurement process\
+      \ should be readily available to the public. Compliance with the Instruction\
+      \ Manual (IM) on Procurement would mean compliance with the WTO-GPA as well.\n"
+  utter_glossary_14:
+  - text: "A Free Trade Agreement is a binding agreement between 2 countries to strengthen\
+      \ cross-border trade.\n"
+  utter_glossary_14_1:
+  - text: "The determination of whether a procurement is covered under a particular\
+      \ FTA is also similar to the three main factors in WTO-GPA, namely entity coverage,\
+      \ services coverage, thresholds and the assumption that all goods (except certain\
+      \ non-sensitive defence procurements) are covered. The difference is in the\
+      \ degree of commitment under various FTAs.\n"
+  utter_glossary_15:
+  - text: "In the course of evaluation and before award of the tender, 2-stage tendering\
+      \ procedure can be invoked if it is necessary for the department to refine their\
+      \ requirements or modify other provisions in the tender (provided that there\
+      \ is a provision in the tender documents that allows for 2-stage tendering procedure).\
+      \ In such cases, revisions made to the original tender (be it terms and conditions\
+      \ or requirements) should be fine-tuning in nature and are not substantial changes.\n"
+  utter_glossary_15_1:
+  - text: "Prior approval of CEO/DCEO must be sought before the second stage is invoked\
+      \ in accordance with FOM 502(4). It is best that all suppliers who had submitted\
+      \ tender proposals earlier be given an opportunity to submit a fresh proposal\
+      \ based on the refined requirements because the changed requirements may affect\
+      \ the suppliers’ proposals and their ability to meet evaluation criteria, including\
+      \ Critical Criteria.\n"
+  utter_glossary_16:
+  - text: "A consortium is formed when a group of companies come together in a joint\
+      \ venture, pooling their competency in various different specialisations in\
+      \ order to bid for and undertake a Tender Proposal which requires expertise\
+      \ in many different fields. A consortium is not a legal entity (unincorporated)\
+      \ but it could have a different name from its founding companies.  A leader\
+      \ of the consortium is chosen among its founding companies.\n"
+  utter_glossary_17:
+  - text: "Debarment is the restriction of a supplier from doing business with the\
+      \ government for a period of time due to infringes on contract, or poor behavior.\
+      \ The period of debarment depends on the value of the contract and the infringement.\
+      \ The authority on debarment is the Standing Committee on Debarment (SCOD).\
+      \ Government agencies who wish to debar a contractor submit their debarment\
+      \ recommendation reports to SCOD which then considers and decides if debarment\
+      \ is applicable.\n"
+  utter_glossary_18:
+  - text: "Novation is the changing of supplier mid-way through the contract due to\
+      \ changed circumstances such as mergers & acquisitions, financial difficulties\
+      \ etc. A Novation Agreement is used to appoint a suitable supplier whom is able\
+      \ to take up the contract with no changes made. Novation of a contract minimizes\
+      \ disruption to a project and is a viable option to termination and re-tender\
+      \ of a contract, which would cause delay.\n"
+  utter_glossary_19:
+  - text: "Security deposit is a safeguard in tender to ensure that the supplier delivers\
+      \ his supplies or perform his services promptly in accordance with the terms\
+      \ and conditions of the contract. Where the security deposit is required, this\
+      \ requirement including the quantum must be indicated in the Conditions of Contract\
+      \ and it shall be collected from the awarded supplier.\n"
+  utter_glossary_19_1:
+  - text: "When the contract expires, the security deposit or any balance due to the\
+      \ supplier shall be refunded in accordance with the terms of the contract. \
+      \ Security deposit shall be waived for contracts equal to or below an EPV of\
+      \ $500,000.\n"
+  utter_glossary_20:
+  - text: "Selective Tender is a 2-stage process commonly used for complex procurement.\
+      \ The 1st stage being the qualification stage and the 2nd stage being the tender\
+      \ stage. During the qualification stage, a Qualification Notice is published\
+      \ on GeBIZ, and only qualified suppliers are invited to tender, which leads\
+      \ to the 2nd stage. During the 2nd stage, tenders submitted are evaluated. Suppliers\
+      \ could still request for qualification during this stage, provided they submit\
+      \ their request within 25 days of the Tender Notice.\n"
+  utter_glossary_20_1:
+  - text: "Selective Tender approach is not to be confused with 2-Stage Tendering,\
+      \ where the latter being an instrument to make slight changes to the Invitation\
+      \ To Tender (ITT) during the evaluation of tenders.\n"
+  utter_glossary_21:
+  - text: "In most contracts, typically there will be a clause for liquidated damages\
+      \ (LD).  As a general rule, liquidated damages can be calculated on the basis\
+      \ of returning to the position that it would have been in if the failures had\
+      \ not occurred.  Liquidated damages must commensurate the damages or loss suffered\
+      \ by the Authority if the supplier fails to fulfil his contractual obligations.\
+      \ They are not intended to be punitive in nature.\n"
+  utter_glossary_22:
+  - text: "Price-Quality Method (PQM) is used for the evaluation of construction tenders\
+      \ invited under the BCA CW Workheads and with EPV of $3m and above.\n"
+  utter_glossary_23:
+  - text: "Quality-Fee Selection Method (QFM) is used to procure consultancy services\
+      \ for their building and construction projects.  The QFM is a 2-envelope system\
+      \ whereby firms will submit their quality and fee proposals in separate envelopes.\
+      \ The quality proposal will be evaluated first before the fee proposal is opened.\
+      \ No changes to the quality scores are to be made after the fee proposals are\
+      \ opened. The weightings for all the criteria, including fee, must be determined\
+      \ and stated upfront.\n"
+  utter_glossary_2:
+  - text: "Instruction Manual (IM) on Procurement are instructions to government agencies\
+      \ on how to carry out procurement in compliance with government policies and\
+      \ Singapore international treaty obligations (WTO-GPA / FTAs).\n"
+  utter_glossary_4:
+  - text: "Estimated Procurement Value (EPV) is the estimated cost of the goods and\
+      \ services to be procured (e.g. estimated unit price x estimated quantity),\
+      \ including contingency amount, provisional sum and contract options, if any.\
+      \ See IM Procurement Stage 2, Rule 7.3 for details on how to derive EPV.\n"
+  utter_glossary_24:
+  - text: "For consultancy services in construction projects, we should, in general,\
+      \ not impose LDs on consultants listed under the Public Sector Panel of Consultants\
+      \ (PSPC) for all disciplines, including quantity surveying and project management\
+      \ services.  This is because consultants are typically engaged ahead of the\
+      \ construction phase and usually with some float time available.\n"
+  utter_glossary_24_1:
+  - text: "Consultant\\'s performance also depends on when and how we engage them.\
+      \ It is often not possible to ascertain if project delays can be specifically\
+      \ attributed to the consultants for construction projects.   Additionally, it\
+      \ is also the industry norm not to impose LDs on construction consultancy tenders.\n"
+  utter_glossary_25:
+  - text: "Where product knowledge and market awareness are required, departments\
+      \ are encouraged to adopt some forms of market testing and pre-tender collaboration\
+      \ methods such as RFI (Request for Information).  RFI is a mechanism for gathering\
+      \ information and concept proposals. Please note that RFI constitutes the pre-procurement\
+      \ segment of the procurement cycle.  Suitable sourcing methods must be adopted\
+      \ after the RFI phase.\n"
+  utter_glossary_26:
+  - text: "Request for Proposal (RFP) is a procurement approach applied when there\
+      \ is no strong preference of how the Goods or Services would be, and is used\
+      \ to communicate outcome-based requirements. Therefore, RFP is not as specific\
+      \ as tender specifications and allow for some flexibility and diversity in proposals\
+      \ submitted. However, evaluation of proposals would be more challenging and\
+      \ tenders should still be used for straight forward procurement.\n"
+  utter_glossary_26_1:
+  - text: "See   <a target='_blank' https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/REQUEST-FOR-PROPOSAL-(RFP).aspx\
+      \ IM on Procurement, Stage 2 Rule 3</a> for details.\n"
+  utter_glossary_27:
+  - text: "Small Value Purchase (SVP) is a sourcing method for procurement of goods\
+      \ and/or services which the estimated procurement value (EPV) does not exceed\
+      \ $6,000. SVP is to cater for ad-hoc buys, not recurring purchases.\n"
+  utter_glossary_27_1:
+  - text: "If you are procuring via SVP, you would need to complete the <a target='_blank'\
+      \ https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-4.aspx\
+      \  \\'Approval for Small Value Purchase\\' form</a> and seek your Director\\\
+      's approval.\n"
+  utter_glossary_27_2:
+  - text: "In assessing the price for SVP, you may use recent purchases, prices in\
+      \ DA contracts, posted prices by suppliers in the media or any other source\
+      \ of reliable information (e.g. flyers, Internet, newspapers) for comparison.\
+      \ It is not mandatory to obtain written or verbal quotes from suppliers.\n"
+  utter_glossary_28:
+  - text: "Quotation is a sourcing method for procurement of goods and/or services\
+      \ which estimated procurement value (EPV) exceeds $6,000 and up to $90,000.\n"
+  utter_glossary_28_1:
+  - text: "If you are procuring via quotation, you would need to seek QAA\\'s approval\
+      \ of the <a target='_blank' https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-6.aspx\
+      \ Quotation Report</a>\n"
+  utter_glossary_28_2:
+  - text: "The QAA comprises 2 members – Director or Senior Director (one member to\
+      \ be from Department concerned).\n"
+  utter_glossary_29:
+  - text: "Tender is a sourcing method for procurement of goods and/or services which\
+      \ estimated procurement value (EPV) exceeds $90,000.\n"
+  utter_glossary_29_1:
+  - text: "If you are procuring via tender, you would need to seek TAA\\'s approval\
+      \ of the <a target='_blank' https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-6.aspx\
+      \ Tender Recommendation Report</a> in reference to FOM 510.\n"
+  utter_glossary_30:
+  - text: "There are some DA contracts governed by overarching policies that mandate\
+      \ the need to procure from these DA contracts, even though the purchase could\
+      \ be an ad-hoc purchase not exceeding $6,000. These include DA contracts established\
+      \ by GovTech such as G-Cloud services as the goods/ services have been tested\
+      \ for compatibility and security for agencies’ use\n"
+  utter_glossary_30_1:
+  - text: "See link <https://intranet.mof.gov.sg/portal/Procurement/Policy-Innovations/Procurement-Approaches/Demand-Aggregation.aspx>\
+      \ for the list of mandatory DA contracts.\n"
+  utter_glossary_31:
+  - text: "Special Procurement Procedures apply to the following list of goods/services:</br>\
+      \ (a) supply of gas and water;</br> (b) supply of basic mail services1; and</br>\
+      \ (c) cabling or piping works – such as diversion, connection/disconnection,\
+      \ extension, upgrade etc, relating to telecommunications or electrical cables,\
+      \ water or gas piping, etc. supplied by the existing service providers.\n"
+  utter_glossary_31_1:
+  - text: "Procedure</br> (1) Seek expenditure approval in accordance with Financial\
+      \ Operation Manual (FOM) 401</br> (2) Obtain official quote from supplier</br>\
+      \ (3) Evaluate and seek approval to award in accordance with FOM 510</br> (4)\
+      \ Establish contract with awarded supplier. Signing of contracts shall be done\
+      \ in accordance with current guidelines on signatories\n"
+  utter_glossary_31_2:
+  - text: "Note:</br> - Latest signing guideline on Uranium: Link</br> - For Letter\
+      \ of Acceptance (LOA): FOM 510 – The LOA to the successful tenderer shall be\
+      \ signed by minimally the Department Director</br> (5) Put up request for posting\
+      \ of award in GeBIZ to Procurement Team</br> (6) Approvals and handling of post\
+      \ contractual issues (e.g. variations, exercising of options, etc.) shall follow\
+      \ URA’s existing guidelines/procedures\n"
+  utter_glossary_32:
+  - text: "An emergency is generally defined as a situation where Singapore’s security\
+      \ or economy is threatened, or public health and safety on a large scale is\
+      \ at stake.\n"
+  utter_glossary_32_1:
+  - text: "Activation and deactivation of Emergency Procurement requires approval\
+      \ from the Permanent Secretary of MND in person and staff is required to follow\
+      \ the Emergency Procurement procedures to procure the required goods/services\
+      \ e.g. seeking expenditure and award approvals, etc.\n"
+  utter_glossary_32_2:
+  - text: "In recognition that more flexibilities might be required to facilitate\
+      \ expediency and improve procurement productivity during Emergency Procurement\
+      \ situations, it will no longer be mandatory to use GeBIZ for Emergency Procurement.\n"
+  utter_glossary_32_3:
+  - text: "In addition, it is not required to seek approval to carry out Direct Contracting\
+      \ for Emergency Procurement situations.\n"
+  utter_faq/FAQ-Government Procuring Entities (GPEs):
+  - text: "Government Procuring Entities (GPEs) refer to Ministries, Departments,\
+      \ Organs of State and Statutory Boards, buying goods, services and construction\
+      \ services for their own use or on behalf of other GPEs.\n"
+  utter_faq/FAQ-approving award of quotation:
+  - text: "The Quotation Approving Authority (QAA) is the approving authority for\
+      \ quotations with Approved Procurement Value (APV) up to $90,000.</br>  The\
+      \ QAA panel comprises 2 members – Director or Senior Director (one member to\
+      \ be from Department concerned).\n"
+  utter_faq/FAQ-approving award of tender:
+  - text: "The composition and the financial limits (in terms of Approved Procurement\
+      \ Value (APV)) of the Tender Approving Authority (TAA) are as follows: </br>\
+      \ <u>Tenders Board A (up to $1 mil)</u> </br> Chairman – DCEO </br> 2 members\
+      \ – Group Director (one member to be from Department concerned) </br> </br>\
+      \ <u>Tenders Board B (up to $10 mil)</u> </br> Chairman – CEO </br> 2 members\
+      \ – DCEO or Group Director (one member to be from Department concerned) </br>\
+      \ </br> <u>Tenders Board C (Exceeding $10 mil)</u> </br> The Authority (i.e.\
+      \ URA Board)\n"
+  utter_faq/FAQ-approving exercise of option:
+  - text: "The approving authority to exercise option is determined based on the value\
+      \ of option as follows:</br></br> Director: Up to $30,000</br> Senior Director:\
+      \ Up to $80,000</br> Any amount: Group Director and above </br></br> You can\
+      \ refer to Stage 8 - Exercise Options for more details.\n"
+  utter_faq/FAQ-difference between Period Contract and Framework Agreement:
+  - text: "Period Contracts are used when the unit prices are fixed and defined for\n\
+      \ the contractual period, and there is no need to call for further\n quotation\
+      \ for individual purchases,  e.g. Vital's DA contract for\n catering services.\
+      \ </br></br> Framework Agreements are useful for\n purchases within a broad\
+      \ scope where it is not feasible or advantageous\n to determine the individual\
+      \ goods or services upfront. The awarded DA\n contractor(s) is requested to\
+      \ quote via Request for Quotation (RFQ),\n e.g. MCI's DA contract for customised\
+      \ graphic design services with\n variable man-effort involved for each unique\
+      \ project. </br></br> Refer\n to https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/PERIOD-CONTRACTS-AND-FRAMEWORK-AGREEMENTS.aspx\
+      \ IM\n on Procurement, Stage 2 Rule 4</a> for details.\n"
+  utter_faq/FAQ-procurement for food catering services:
+  - text: "There is a DA contract (Ref. FINVITETT17000004) for the provision of catering\
+      \ services, which is effective from 1 Oct 17 to 30 Sep 20.  You are strongly\
+      \ encouraged to purchase from the DA contract (be it for ad-hoc or recurring\
+      \ purchases, regardless of amount), as this would ensure that the caterers and\
+      \ menus selected comply with HPB’s Healthier Catering guidelines https://intranet.mof.gov.sg/portal/IM/Circulars/MOF/Circular-Minutes/2017/Supporting-the-Whole-of-Government-Healthier-C-(1).aspx\
+      \ . The DA contract for food catering also provides savings in terms of discounts\
+      \ for higher value purchases and does not impose delivery charges. </br></br>\
+      \ Refer to this to learn more about the procurement procedures for food catering\
+      \ services!\n"
+  utter_faq/FAQ-mandatory to book venues with Green mark Certification:
+  - text: "Government agencies are required to hold events and functions in venues\
+      \ with at least a Green Mark Certified rating effective from 1 Jan 15 as set\
+      \ out in Finance Circular Minute (FCM) M14/2014 https://intranet.mof.gov.sg/portal/IM/Circulars/MOF/Circular-Minutes/2014/Public-Sector-Taking-the-Lead-in-Environmental-Sus.aspx\
+      \ .  In the event where the contractor is required to source for suitable venue(s)\
+      \ in addition to the provision of other goods/services under the contract (e.g.\
+      \ an event management services contract may include sourcing of venue), the\
+      \ event/function shall also be held in Green Mark certified venues.\n"
+  utter_faq/FAQ-expenditurepapersendwhere:
+  - text: "Please refer to the table to determine whether support from Dir(Fin) is\
+      \ required. The expenditure paper should be vetted by your team lead or Director\
+      \ before it is sent to Finance for support. Please send the paper to Dir(Fin)\
+      \ and cc your group’s Finance Manager and Procurement Manager.\n"
+  utter_faq/FAQ-SVPquotes:
+  - text: "IM on Procurement does not mandate the need for 3 quotes.</br></br> However,\
+      \ assessment of the reasonableness of the price(s) quoted is still required.\
+      \ Assessment may be based on verbal or written quotes, recent purchases, suppliers'\
+      \ published rates, or any other source of reliable information (e.g. flyers,\
+      \ Internet, newspapers). You can also use GeBIZ Mall or call quotations through\
+      \ GeBIZ.\"\n"
   utter_faq/FAQ-awarding proposal with highest score for Price-Quality Evaluation:
-  - text: >
-      Quotations/Tenders should only be awarded to the tenderer who obtains the
-      highest score, and deviation should only be exercised if there are overriding
-      considerations outside of the stated evaluation criteria (e.g. firm is facing
-      litigation case which may be of relevance to the quotation/tender). Otherwise,
-      we should recommend award to the tenderer with the highest score, so as to
-      avoid accusation of favouritism and perception of bias."
+  - text: "Quotations/Tenders should only be awarded to the tenderer who obtains the\
+      \ highest score, and deviation should only be exercised if there are overriding\
+      \ considerations outside of the stated evaluation criteria (e.g. firm is facing\
+      \ litigation case which may be of relevance to the quotation/tender). Otherwise,\
+      \ we should recommend award to the tenderer with the highest score, so as to\
+      \ avoid accusation of favouritism and perception of bias.\"\n"
   utter_faq/FAQ-signing formal contract or agreement:
-  - text: >
-      IM on Procurement does not mandate the signing of Formal Contract or
-      Agreement after the Letter of Acceptance or LOA is issued to the successful
-      tenderer. However, a Formal Contract or an Agreement is necessary when the
-      procurement is complex or when the nature/scope of the works involved warrants
-      it. This is to ensure that both parties have the same understanding on the
-      documents that form the contract to prevent downstream disputes. Examples
-      where a Formal Contract or an Agreement may be required:\1.High value complex
-      projects (e.g. construction projects, consultancy projects, etc) 2. Many rounds
-      of tender clarifications during evaluation 3. Goods/services to be delivered
-      over a period of time (e.g. system development, term contracts, etc 4. Many
-      items in Schedule of Rates 5. Many milestones/ deliverables involved
-      
+  - text: "IM on Procurement does not mandate the signing of Formal Contract or Agreement\
+      \ after the Letter of Acceptance or LOA is issued to the successful tenderer.\
+      \ However, a Formal Contract or an Agreement is necessary when the procurement\
+      \ is complex or when the nature/scope of the works involved warrants it. This\
+      \ is to ensure that both parties have the same understanding on the documents\
+      \ that form the contract to prevent downstream disputes. Examples where a Formal\
+      \ Contract or an Agreement may be required:\\1.High value complex projects (e.g.\
+      \ construction projects, consultancy projects, etc) 2. Many rounds of tender\
+      \ clarifications during evaluation 3. Goods/services to be delivered over a\
+      \ period of time (e.g. system development, term contracts, etc 4. Many items\
+      \ in Schedule of Rates 5. Many milestones/ deliverables involved\n"
   utter_faq/FAQ-Sponsorship subject to IM:
-  - text: "No, Sponsorship is not subject to IM on Procurement."
- 
-  utter_faq/FAQ-rules for giving honorarium:
-  - text: >
-        An honorarium is a payment for a service which has been done ex gratia
-        or which fees are not legally required. Since the payment is made
-        without the giver recognising any liability or legal obligation (i.e.
-        there is no contract between URA and the receiver), this is not
-        considered procurement and would not be subject to the IM on Procurement
-        rules and procedures.
-  utter_faq/FAQ-rules for giving honorarium_1:
-  - text: >
-        The honorarium amount could be a token sum as a form of appreciation, or
-        an amount to cover the necessary expenditure (e.g. hotel, air tickets)
-        incurred by the speaker. While there are no guidelines on the IM with
-        regard to the amount, individual agencies shall ensure there are
-        adequate internal controls in place to approve the amount.
-  utter_faq/FAQ-rules for giving honorarium_2:
-  - text: >
-        Please note that if URA choose to procure the speaker’s necessary
-        accommodation and air tickets, procurement rules will apply for the
-        procurement of the accommodation and air tickets.
-  utter_faq/FAQ-approval process honorarium:
-  - text: >
-        All of the following conditions are to be met for honorarium:a) The
-        party is providing the services out of goodwill (e.g. no
-        fees/charges/favours requested) b) There is no intent to form a
-        contractual relationship c) There will not be any agreement which will
-        bind both parties legally d) The honorarium given is not agreed upon
-        upfront
-  utter_faq/FAQ-approval process honorarium_1:
-  - text: >
-        Please put up an expenditure paper for the honorarium (which will
-        require Fin's support) and address these conditions in your paper to
-        provide proper justification for giving honorarium, including the
-        quantum.
-        
+  - text: No, Sponsorship is not subject to IM on Procurement.
+  utter_faq_m/FAQ-rules for giving honorarium:
+  - text: "An honorarium is a payment for a service which has been done ex gratia\
+      \ or which fees are not legally required. Since the payment is made without\
+      \ the giver recognising any liability or legal obligation (i.e. there is no\
+      \ contract between URA and the receiver), this is not considered procurement\
+      \ and would not be subject to the IM on Procurement rules and procedures.\n"
+  utter_faq_m1/FAQ-rules for giving honorarium_1:
+  - text: "The honorarium amount could be a token sum as a form of appreciation, or\
+      \ an amount to cover the necessary expenditure (e.g. hotel, air tickets) incurred\
+      \ by the speaker. While there are no guidelines on the IM with regard to the\
+      \ amount, individual agencies shall ensure there are adequate internal controls\
+      \ in place to approve the amount.\n"
+  utter_faq_m2/FAQ-rules for giving honorarium_2:
+  - text: "Please note that if URA choose to procure the speaker’s necessary accommodation\
+      \ and air tickets, procurement rules will apply for the procurement of the accommodation\
+      \ and air tickets.\n"
+  utter_faq_m/FAQ-approval process honorarium:
+  - text: "All of the following conditions are to be met for honorarium:a) The party\
+      \ is providing the services out of goodwill (e.g. no fees/charges/favours requested)\
+      \ b) There is no intent to form a contractual relationship c) There will not\
+      \ be any agreement which will bind both parties legally d) The honorarium given\
+      \ is not agreed upon upfront\n"
+  utter_faq_m1/FAQ-approval process honorarium_1:
+  - text: "Please put up an expenditure paper for the honorarium (which will require\
+      \ Fin's support) and address these conditions in your paper to provide proper\
+      \ justification for giving honorarium, including the quantum.\n"
+  utter_faq_m2/FAQ-approval process honorarium_2:
+  - text: "Hope that helped!\n"
   utter_faq/FAQ-considerations for proc of G+S:
-  - text: >
-        Besides adherence to the 3 key principles, staff should also demonstrate
-        socio-political sensitivity to public expectation on the usage of public
-        funds, i.e. (i) we should not procure lavish, extravagant, or
-        unnecessary products or services and indulge in wastage (ii) we should be
-        mindful of the public’s perception of our purchases, e.g. paying a
-        premium for a goods vis-à-vis a lower cost one which could also meet our
-        requirements
-        
+  - text: "Besides adherence to the 3 key principles, staff should also demonstrate\
+      \ socio-political sensitivity to public expectation on the usage of public funds,\
+      \ i.e. (i) we should not procure lavish, extravagant, or unnecessary products\
+      \ or services and indulge in wastage (ii) we should be mindful of the public’s\
+      \ perception of our purchases, e.g. paying a premium for a goods vis-à-vis a\
+      \ lower cost one which could also meet our requirements\n"
   utter_faq/FAQ-factors for proc of high-end G+S:
-  - text: >
-        When the procurement is for niche or high-end products or services, the
-        public could presumably misconstrued them as luxury and therefore you
-        should exercise more caution and consider to:(i) re-examine the need
-        for such products or services especially if the buy is a common product
-        or service, e.g. chairs, booking of venue for conference, transport
-        service, etc.; (ii) Search for alternatives, i.e. similar products or
-        services which are more mid-range or alternative work solutions which
-        can deliver similar outcome; (iii) In the event that (i) and (ii) cannot
-        be fulfilled, you should prepare a cogent explanation for the
-        procurement in anticipation of any queries from the public.
+  - text: "When the procurement is for niche or high-end products or services, the\
+      \ public could presumably misconstrued them as luxury and therefore you should\
+      \ exercise more caution and consider to:(i) re-examine the need for such products\
+      \ or services especially if the buy is a common product or service, e.g. chairs,\
+      \ booking of venue for conference, transport service, etc.; (ii) Search for\
+      \ alternatives, i.e. similar products or services which are more mid-range or\
+      \ alternative work solutions which can deliver similar outcome; (iii) In the\
+      \ event that (i) and (ii) cannot be fulfilled, you should prepare a cogent explanation\
+      \ for the procurement in anticipation of any queries from the public.\n"
   utter_faq/FAQ-Conflict of Interest:
-  - text: >
-        The guiding principle is that an officer's private interests should be
-        separate from his public duties, and that there should be no conflict of
-        interest between an officer's official position and his work, and his
-        activities outside his official duties. When in doubt at any procurement
-        stage, officers should declare any potential conflict of interest and
-        inform their supervisors.
-  utter_faq/FAQ-using RFP and not tenders:
-  - text: >
-        A Request for Proposal (RFP) is a procurement approach to communicate
-        outcome-based requirements and where the proposal that most closely fits
-        the needs and budget is selected, or where it is not industry practice
-        to tender for the items.
-  - text: >
-        While RFP allows for diversity in proposals submitted and for discussion
-        and changes in scope, you must note that evaluation of proposals will be
-        more challenging as you are not comparing like-for-like.  So for the
-        straight forward buys, where requirements are standard and there is no
-        need for innovation, tender is still the best method to employ.
-  - text: The same principles and procedure for calling tenders also apply to RFP.
-  
-  
+  - text: "The guiding principle is that an officer's private interests should be\
+      \ separate from his public duties, and that there should be no conflict of interest\
+      \ between an officer's official position and his work, and his activities outside\
+      \ his official duties. When in doubt at any procurement stage, officers should\
+      \ declare any potential conflict of interest and inform their supervisors.\n"
+  utter_faq_m/FAQ-using RFP and not tenders:
+  - text: "A Request for Proposal (RFP) is a procurement approach to communicate outcome-based\
+      \ requirements and where the proposal that most closely fits the needs and budget\
+      \ is selected, or where it is not industry practice to tender for the items.\n"
+  utter_faq_m1/FAQ-using RFP and not tenders:
+  - text: "While RFP allows for diversity in proposals submitted and for discussion\
+      \ and changes in scope, you must note that evaluation of proposals will be more\
+      \ challenging as you are not comparing like-for-like.  So for the straight forward\
+      \ buys, where requirements are standard and there is no need for innovation,\
+      \ tender is still the best method to employ.\n"
+  utter_faq_m2/FAQ-using RFP and not tenders:
+  - text: "The same principles and procedure for calling tenders also apply to RFP.\n"
   utter_faq/FAQ-is purchase (SVP) if below $6000:
-  - text: >
-        You need to check if there are any existing bulk tenders (e.g. in place
-        before starting on procurement. This applies to all types and value of
-        procurement, including SVP. SVPs are meant for low value one-off
-        purchases that are not available from Demand Aggregation contracts (e.g.
-        DSTA or IDA Bulk Tender). Departments should exercise prudence and ensure
-        that their expenditure on small value buys are reasonable.
+  - text: "You need to check if there are any existing bulk tenders (e.g. in place\
+      \ before starting on procurement. This applies to all types and value of procurement,\
+      \ including SVP. SVPs are meant for low value one-off purchases that are not\
+      \ available from Demand Aggregation contracts (e.g. DSTA or IDA Bulk Tender).\
+      \ Departments should exercise prudence and ensure that their expenditure on\
+      \ small value buys are reasonable.\n"
   utter_faq/FAQ-splitting purchase:
-  - text: >
-        Generally, purchases should not be split into small quantities in order
-        to avoid complying with the instructions under IM on Procurement. Where
-        needs can be reasonably foreseen, you should plan purchases in advance
-        and aggregate those of similar nature so as to benefit from economies of
-        scale. If there is a recurring need for the purchase, departments should
-        look into establishing a period contract.
+  - text: "Generally, purchases should not be split into small quantities in order\
+      \ to avoid complying with the instructions under IM on Procurement. Where needs\
+      \ can be reasonably foreseen, you should plan purchases in advance and aggregate\
+      \ those of similar nature so as to benefit from economies of scale. If there\
+      \ is a recurring need for the purchase, departments should look into establishing\
+      \ a period contract.\n"
   utter_faq/FAQ-A14:
-  - text: >
-        First, you should decide on the most appropriate approach-whether to
-        “in-source” (engage another Government Agency) or “outsource”, based on
-        factors such as efficiency and best value. If the decision is to
-        ‘out-source’, the procurement rules would apply. In this instance, you
-        shall not approach the Government Agency to participate in the
-        tender/quotation as they should not be competing with private sector. If
-        the decision is to “in-source”, it is considered as collaboration
-        between Government Agencies which is not subject to procurement rules.
+  - text: "First, you should decide on the most appropriate approach-whether to “in-source”\
+      \ (engage another Government Agency) or “outsource”, based on factors such as\
+      \ efficiency and best value. If the decision is to ‘out-source’, the procurement\
+      \ rules would apply. In this instance, you shall not approach the Government\
+      \ Agency to participate in the tender/quotation as they should not be competing\
+      \ with private sector. If the decision is to “in-source”, it is considered as\
+      \ collaboration between Government Agencies which is not subject to procurement\
+      \ rules.\n"
   utter_faq/FAQ-A16:
-  - text: >
-        Weightage for evaluation criteria should also be stated upfront in the
-        tender documents so that all tenderers are aware what is important to us
-        and bid on a level playing field.
+  - text: "Weightage for evaluation criteria should also be stated upfront in the\
+      \ tender documents so that all tenderers are aware what is important to us and\
+      \ bid on a level playing field.\n"
   utter_faq/FAQ-A15:
-  - text: >
-        EPPU and BCA registrations do give indication on the financial capacity
-        of the tenderers. No further financial evaluation will be required if
-        that is adequate for your assessment. However, you are still free to
-        request for further financial information if deemed necessary according
-        to your risk threshold level for the particular tender.
+  - text: "EPPU and BCA registrations do give indication on the financial capacity\
+      \ of the tenderers. No further financial evaluation will be required if that\
+      \ is adequate for your assessment. However, you are still free to request for\
+      \ further financial information if deemed necessary according to your risk threshold\
+      \ level for the particular tender.\n"
   utter_faq/FAQ-Specify budget in tender docs:
-  - text: >
-        IM is silent on whether you should specify the budget in your tender
-        documents. There are pros and cons in doing so. Specifying a budget may
-        cause suppliers to quote around your budget even though they are able to
-        supply/deliver at a much better value. Not specifying the budget may
-        attract a whole spectrum of bids, some or all of which are way beyond
-        your budget. You will have to assess this while preparing your
-        specifications.
-  'utter_faq/FAQ-proc with EPV below $70,000':
-  - text: >
-        Yes, a tender can also be used as a sourcing method for procurement with
-        EPV below $70,000. The Quotation Approving Authority shall be the
-        approving authority for Approved Procurement Value (APV) up to $80,000
-        in reference to IM on Procurement, Stage 4, FAQ 1.1.
+  - text: "IM is silent on whether you should specify the budget in your tender documents.\
+      \ There are pros and cons in doing so. Specifying a budget may cause suppliers\
+      \ to quote around your budget even though they are able to supply/deliver at\
+      \ a much better value. Not specifying the budget may attract a whole spectrum\
+      \ of bids, some or all of which are way beyond your budget. You will have to\
+      \ assess this while preparing your specifications.\n"
+  utter_faq/FAQ-proc with EPV below $70,000:
+  - text: "Yes, a tender can also be used as a sourcing method for procurement with\
+      \ EPV below $70,000. The Quotation Approving Authority shall be the approving\
+      \ authority for Approved Procurement Value (APV) up to $80,000 in reference\
+      \ to IM on Procurement, Stage 4, FAQ 1.1.\n"
   utter_faq/FAQ-choosing between Direct Contracting and Limited Tender or Quotation:
-  - text: >
-        Differences between these 2 approaches are summarised in the table. You
-        will have to assess which approach is more appropriate for your
-        purchase. Refer to Stage 2-Determining Procurement Approach for
-        details on how to seek approval for Limited Quotation or Tender or Direct
-        Contracting.
+  - text: "Differences between these 2 approaches are summarised in the table. You\
+      \ will have to assess which approach is more appropriate for your purchase.\
+      \ Refer to Stage 2-Determining Procurement Approach for details on how to seek\
+      \ approval for Limited Quotation or Tender or Direct Contracting.\n"
   utter_faq/FAQ-need min. opening period for tenderers invited to bid:
-  - text: >
-        No, there is no minimum opening period for limited quotations or tenders
-        but it is a good practice to provide at least 3 working days so that
-        tenderers have sufficient time to prepare their tender submission.
-        Please note that if the invited tenderers are not able to respond by the
-        closing date, you would have to re-call the tender.
+  - text: "No, there is no minimum opening period for limited quotations or tenders\
+      \ but it is a good practice to provide at least 3 working days so that tenderers\
+      \ have sufficient time to prepare their tender submission. Please note that\
+      \ if the invited tenderers are not able to respond by the closing date, you\
+      \ would have to re-call the tender.\n"
   utter_faq/FAQ-Limited Tender for sensitive proc:
-  - text: >
-        Unless the procurement qualifies for Limited Tender, open tender must be
-        called. “Sensitive in nature” is not one such ground for Limited Tender.
-        You need to pay extra attention to tender documents and to ensure that
-        they are desensitised for public consumption. If the tender details are
-        sensitive, you may consider not to publish the entire tender document in
-        GeBIZ. Tenderers who are interested will need to collect the relevant
-        tender documents containing the sensitive information from our premises.
-        You may also consider asking tenderers to complete a “Non-Disclosure
-        Agreement (NDA)” form before releasing the tender documents.
+  - text: "Unless the procurement qualifies for Limited Tender, open tender must be\
+      \ called. “Sensitive in nature” is not one such ground for Limited Tender. You\
+      \ need to pay extra attention to tender documents and to ensure that they are\
+      \ desensitised for public consumption. If the tender details are sensitive,\
+      \ you may consider not to publish the entire tender document in GeBIZ. Tenderers\
+      \ who are interested will need to collect the relevant tender documents containing\
+      \ the sensitive information from our premises. You may also consider asking\
+      \ tenderers to complete a “Non-Disclosure Agreement (NDA)” form before releasing\
+      \ the tender documents.\n"
   utter_faq/FAQ-proc procedure for cash vouchers:
-  - text: >
-        Procurement principles apply to purchase of vouchers. Even though
-        vouchers have a face value, they are not necessarily sold at face value.
-        It is possible that merchants may sell these vouchers below face value
-        at bulk volume discounts, or sell at face value but include non-price
-        perks such as additional free vouchers or longer validity periods etc.
-        Hence it is useful to compare these non-price elements as well.
+  - text: "Procurement principles apply to purchase of vouchers. Even though vouchers\
+      \ have a face value, they are not necessarily sold at face value. It is possible\
+      \ that merchants may sell these vouchers below face value at bulk volume discounts,\
+      \ or sell at face value but include non-price perks such as additional free\
+      \ vouchers or longer validity periods etc. Hence it is useful to compare these\
+      \ non-price elements as well.\n"
   utter_faq/FAQ-changes allowed to tender in 2-stage tendering:
-  - text: >
-        Generally, revisions made to the original tender (be it terms and
-        conditions or requirements) should be fine-tuning in nature and should
-        not be substantial such that it warrants a new tender to be called. It
-        is not possible to have a guideline like changes should be limited to x%
-        of the original tender. So you ought to state the scope of changes when
-        seeking approval from CEO/DCEO before carrying out 2-Stage tendering.
+  - text: "Generally, revisions made to the original tender (be it terms and conditions\
+      \ or requirements) should be fine-tuning in nature and should not be substantial\
+      \ such that it warrants a new tender to be called. It is not possible to have\
+      \ a guideline like changes should be limited to x% of the original tender. So\
+      \ you ought to state the scope of changes when seeking approval from CEO/DCEO\
+      \ before carrying out 2-Stage tendering.\n"
   utter_faq/FAQ-single bid for open quotation or tender:
-  - text: >
-        You may award the single bid if you have:(i) Assessed that the proposal
-        fully meets your requirements (ii) Assessed that the price submitted by
-        the single bidder is reasonable (e.g. you may compare with past
-        purchases, market rate etc) (iii) Ensured that the Specifications are
-        not overly prescriptive such that they preclude competition (iv) Allowed
-        sufficient time for suppliers to submit their bids (especially for
-        complex tenders)  (v) Made effort to cultivate interest and encourage
-        suppliers to participate in the quotation/tender after it has been
-        published.  MND has mandated that clearance from CEO / DCEO is required
-        to accept the single bid prior to award.
+  - text: "You may award the single bid if you have:(i) Assessed that the proposal\
+      \ fully meets your requirements (ii) Assessed that the price submitted by the\
+      \ single bidder is reasonable (e.g. you may compare with past purchases, market\
+      \ rate etc) (iii) Ensured that the Specifications are not overly prescriptive\
+      \ such that they preclude competition (iv) Allowed sufficient time for suppliers\
+      \ to submit their bids (especially for complex tenders)  (v) Made effort to\
+      \ cultivate interest and encourage suppliers to participate in the quotation/tender\
+      \ after it has been published.  MND has mandated that clearance from CEO / DCEO\
+      \ is required to accept the single bid prior to award.\n"
   utter_faq/FAQ-more than 1 bid received but only 1 acceptable:
-  - text: >
-        No, a single-bid situation is when only one bid is received in the
-        quotation or tender. In the event your quotation/tender has two line
-        items-one of the items only receives one bid while the other receives
-        more than 1 bid, this is also not considered as a single bid.
+  - text: "No, a single-bid situation is when only one bid is received in the quotation\
+      \ or tender. In the event your quotation/tender has two line items-one of the\
+      \ items only receives one bid while the other receives more than 1 bid, this\
+      \ is also not considered as a single bid.\n"
   utter_faq/FAQ-evaluation for late hardcopy tender submission:
-  - text: >
-        Whether the hardcopy submission is late, you have to ensure that the
-        acceptance of late hard copy submission does not give rise to unfair
-        practices.  </br></br> You should consider whether the information
-        submitted via the hardcopy submission affects the prices or the proposal
-        submitted via GeBIZ. If the hardcopy submissions are merely supporting
-        documents which contain factual information (e.g. financial statements),
-        there should not be any concerns as tenderers are not able to modify the
-        late submission to their advantage (e.g. to further refine their
-        proposal with the additional time or after having knowledge of the bids
-        published on GeBIZ).  </br></br> The best way to avoid such situation is
-        to mandate a full electronic submission whenever possible.
+  - text: "Whether the hardcopy submission is late, you have to ensure that the acceptance\
+      \ of late hard copy submission does not give rise to unfair practices.  </br></br>\
+      \ You should consider whether the information submitted via the hardcopy submission\
+      \ affects the prices or the proposal submitted via GeBIZ. If the hardcopy submissions\
+      \ are merely supporting documents which contain factual information (e.g. financial\
+      \ statements), there should not be any concerns as tenderers are not able to\
+      \ modify the late submission to their advantage (e.g. to further refine their\
+      \ proposal with the additional time or after having knowledge of the bids published\
+      \ on GeBIZ).  </br></br> The best way to avoid such situation is to mandate\
+      \ a full electronic submission whenever possible.\n"
   utter_faq/FAQ-steps to take when recalling a tender:
-  - text: >
-        You could consider:</br> (a) revising specifications to ensure they are
-        broad enough to attract competition;</br> (b) lengthening the opening
-        period of the tender or quotation; and/or</br> (c) alerting suppliers to
-        the opportunity published on GeBIZ.
-  'utter_faq/FAQ-in Tender Evaluation Committee (TEC), have friend in bidding company':
-  - text: >
-        You should flag out any conflict of interest or possible public
-        perception of conflict of interest when submitting the tender evaluation
-        and recommendation reports to Tenders Board for approval. This could
-        include cases where related parties including ex-URA staff (who may be
-        involved directly or indirectly in the formulation and preparation of
-        the tenders/quotations earlier) are part of the bidding parties. If in
-        doubt, you should flag out potential conflict of interests for Tenders
-        Board information.   The same would apply for tenders to be submitted to
-        MND’s Tenders Board for approval.
+  - text: "You could consider:</br> (a) revising specifications to ensure they are\
+      \ broad enough to attract competition;</br> (b) lengthening the opening period\
+      \ of the tender or quotation; and/or</br> (c) alerting suppliers to the opportunity\
+      \ published on GeBIZ.\n"
+  utter_faq/FAQ-in Tender Evaluation Committee (TEC), have friend in bidding company:
+  - text: "You should flag out any conflict of interest or possible public perception\
+      \ of conflict of interest when submitting the tender evaluation and recommendation\
+      \ reports to Tenders Board for approval. This could include cases where related\
+      \ parties including ex-URA staff (who may be involved directly or indirectly\
+      \ in the formulation and preparation of the tenders/quotations earlier) are\
+      \ part of the bidding parties. If in doubt, you should flag out potential conflict\
+      \ of interests for Tenders Board information.   The same would apply for tenders\
+      \ to be submitted to MND’s Tenders Board for approval.\n"
   utter_faq/FAQ-approval for qualification of selective tenders:
-  - text: >
-        Selective tender is a procedure where only suppliers satisfying the
-        conditions for participation ("qualified suppliers") can submit a
-        tender. It comprises 2 stages – Pre-tender Qualification stage and the
-        Tender cum Qualification stage. Refer to <a target='_blank'
-        href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/TENDER-PROCEDURES-SELECTIVE-TENDER.aspx'>IM
-        on Procurement, Stage 4 Rule 11</a> for details. The recommendation for
-        qualification of selective tenders shall be approved by CEO.
+  - text: Selective tender is a procedure where only suppliers satisfying the conditions
+      for participation ("qualified suppliers") can submit a tender. It comprises
+      2 stages – Pre-tender Qualification stage and the Tender cum Qualification stage.
+      Refer to https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/TENDER-PROCEDURES-SELECTIVE-TENDER.aspx
+      IM on Procurement, Stage 4 Rule 11</a> for details. The recommendation for qualification
+      of selective tenders shall be approved by CEO.
   utter_faq/FAQ-Purchase Order for tender proc if already have Letter of Acceptance:
-  - text: >
-        Technically, only one type of contracting instrument is required for
-        each procurement. However, if it is a period contract with downstream
-        purchases, then a PO needs to be raised for such downstream purchases.
-        The initial Letter of Acceptance was only to formalise the standing
-        arrangement of the period contract at the upstream.
+  - text: "Technically, only one type of contracting instrument is required for each\
+      \ procurement. However, if it is a period contract with downstream purchases,\
+      \ then a PO needs to be raised for such downstream purchases. The initial Letter\
+      \ of Acceptance was only to formalise the standing arrangement of the period\
+      \ contract at the upstream.\n"
   utter_faq/Purchase Orders(PO) to note:
-  - text: >
-        The 2 most commonly used POs are:</br> a) e-Catalogue PO (e-cat PO)</br>
-        b) Direct PO (DPO)</br></br>  E-Cat PO is PO generated as a result of
-        period contracts which are formed via a quotation or tender. This should
-        be used when you are raising a PO from an existing period contract, e.g.
-        DSTA bulk tender for catering, URA term contract for printing.
-        </br></br> DPO is a standalone PO which is not linked to any
-        quotations/tenders. DPO should only be used for ad-hoc purchases which
-        are not tied to any contracts or small value purchases not above $6,000,
-        where necessary. You may refer to the Finance Circular Minute M20/2003
-        dated 13 May 2003 and any other relevant policies on when the GeBIZ
-        Order (Direct) Module should be used.
+  - text: "The 2 most commonly used POs are:</br> a) e-Catalogue PO (e-cat PO)</br>\
+      \ b) Direct PO (DPO)</br></br>  E-Cat PO is PO generated as a result of period\
+      \ contracts which are formed via a quotation or tender. This should be used\
+      \ when you are raising a PO from an existing period contract, e.g. DSTA bulk\
+      \ tender for catering, URA term contract for printing. </br></br> DPO is a standalone\
+      \ PO which is not linked to any quotations/tenders. DPO should only be used\
+      \ for ad-hoc purchases which are not tied to any contracts or small value purchases\
+      \ not above $6,000, where necessary. You may refer to the Finance Circular Minute\
+      \ M20/2003 dated 13 May 2003 and any other relevant policies on when the GeBIZ\
+      \ Order (Direct) Module should be used.\n"
   utter_faq/FAQ-guideline for acceptable percentage of contract variation:
-  - text: >
-        IM on Procurement is silent on the number of variations allowed per
-        contract or the maximum value of variations allowed. However, it should
-        also not result in substantial changes to the fundamental deliverables
-        of the original contract. You will need to assess whether a variation,
-        and at what quantum/terms, is the most advantageous.
+  - text: "IM on Procurement is silent on the number of variations allowed per contract\
+      \ or the maximum value of variations allowed. However, it should also not result\
+      \ in substantial changes to the fundamental deliverables of the original contract.\
+      \ You will need to assess whether a variation, and at what quantum/terms, is\
+      \ the most advantageous.\n"
   utter_faq/FAQ-Purchase Orders (PO) to note:
-  - text: >
-        The 2 most commonly used POs are:</br> a) e-Catalogue PO (e-cat PO)</br>
-        b) Direct PO (DPO)</br></br>  E-Cat PO is PO generated as a result of
-        period contracts which are formed via a quotation or tender. This should
-        be used when you are raising a PO from an existing period contract, e.g.
-        DSTA bulk tender for catering, URA term contract for printing.
-        </br></br> DPO is a standalone PO which is not linked to any
-        quotations/tenders. DPO should only be used for ad-hoc purchases which
-        are not tied to any contracts or small value purchases not above $6,000,
-        where necessary. You may refer to the Finance Circular Minute M20/2003
-        dated 13 May 2003 and any other relevant policies on when the GeBIZ
-        Order (Direct) Module should be used.
+  - text: "The 2 most commonly used POs are:</br> a) e-Catalogue PO (e-cat PO)</br>\
+      \ b) Direct PO (DPO)</br></br>  E-Cat PO is PO generated as a result of period\
+      \ contracts which are formed via a quotation or tender. This should be used\
+      \ when you are raising a PO from an existing period contract, e.g. DSTA bulk\
+      \ tender for catering, URA term contract for printing. </br></br> DPO is a standalone\
+      \ PO which is not linked to any quotations/tenders. DPO should only be used\
+      \ for ad-hoc purchases which are not tied to any contracts or small value purchases\
+      \ not above $6,000, where necessary. You may refer to the Finance Circular Minute\
+      \ M20/2003 dated 13 May 2003 and any other relevant policies on when the GeBIZ\
+      \ Order (Direct) Module should be used.\n"
   utter_faq/FAQ-Acceptable percentage of contract variation to original tender:
-  - text: >
-        IM on Procurement is silent on the number of variations allowed per
-        contract or the maximum value of variations allowed. However, it should
-        also not result in substantial changes to the fundamental deliverables
-        of the original contract. You will need to assess whether a variation,
-        and at what quantum/terms, is the most advantageous.
+  - text: "IM on Procurement is silent on the number of variations allowed per contract\
+      \ or the maximum value of variations allowed. However, it should also not result\
+      \ in substantial changes to the fundamental deliverables of the original contract.\
+      \ You will need to assess whether a variation, and at what quantum/terms, is\
+      \ the most advantageous.\n"
   utter_faq/FAQ-assessing additional works:
-  - text: >
-        Judgement is required in assessing whether the works constitute
-        variations to the contract, or whether a new quotation/tender should be
-        considered for the additional works. </br></br> Generally, new
-        quotations/tenders should be considered if:</br> a) Scope of new works
-        is outside the original scope of works of the contract.</br> b) Contract
-        period is extended for too long.</br> c) Additional works are extensive
-        or are of high value, as this may mean that the works are attractive
-        enough for new suppliers to consider putting in bids. </br> d) Works are
-        substantial and go beyond the Approved Procurement Value, as this may
-        indicate that the original assumptions upon which the project was based
-        are no longer valid.
+  - text: "Judgement is required in assessing whether the works constitute variations\
+      \ to the contract, or whether a new quotation/tender should be considered for\
+      \ the additional works. </br></br> Generally, new quotations/tenders should\
+      \ be considered if:</br> a) Scope of new works is outside the original scope\
+      \ of works of the contract.</br> b) Contract period is extended for too long.</br>\
+      \ c) Additional works are extensive or are of high value, as this may mean that\
+      \ the works are attractive enough for new suppliers to consider putting in bids.\
+      \ </br> d) Works are substantial and go beyond the Approved Procurement Value,\
+      \ as this may indicate that the original assumptions upon which the project\
+      \ was based are no longer valid.\n"
   utter_faq/FAQ-contract variation involves an increase in APV:
-  - text: >
-        The new Estimated Procurement Value (EPV) is the estimated cost of the
-        goods and services to be procured (e.g. estimated unit price x estimated
-        quantity), including contingency amount, provisional sum and contract
-        options, if any. See IM Procurement Stage 2, Rule 7.3 for details on how
-        to derive <a href =
-        'https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/VALUATION-OF-INTENDED-GP.aspx'
-        target='_blank'>EPV</a>.">EPV</span> has exceeded the approved amount.
-        You would need to seek approval from the relevant authority to incur
-        expenditure based on the new EPV of $105,000. As the Approved
-        Procurement Value (APV) is defined as the total sum, inclusive of
-        contract options, possible contract extensions and contingencies put
-        forward to the relevant Quotation Approving Authority (QAA) or Tender
-        Approving Authority (TAA) for approval.">APV</span> has been increased,
-        you also need to seek approval from Tenders Board based on the revised
-        APV.
+  - text: "The new Estimated Procurement Value (EPV) is the estimated cost of the\
+      \ goods and services to be procured (e.g. estimated unit price x estimated quantity),\
+      \ including contingency amount, provisional sum and contract options, if any.\
+      \ See IM Procurement Stage 2, Rule 7.3 for details on how to derive <a href\
+      \ = 'https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-2-Determining-Procurement-Approach/Topics/VALUATION-OF-INTENDED-GP.aspx'\
+      \ target='_blank'>EPV</a>.\">EPV</span> has exceeded the approved amount. You\
+      \ would need to seek approval from the relevant authority to incur expenditure\
+      \ based on the new EPV of $105,000. As the Approved Procurement Value (APV)\
+      \ is defined as the total sum, inclusive of contract options, possible contract\
+      \ extensions and contingencies put forward to the relevant Quotation Approving\
+      \ Authority (QAA) or Tender Approving Authority (TAA) for approval.\">APV</span>\
+      \ has been increased, you also need to seek approval from Tenders Board based\
+      \ on the revised APV.\n"
   utter_faq/FAQ-novation request from existing contractor:
-  - text: >
-        Novation is often the result of changed circumstances midway through the
-        contract e.g. mergers and acquisitions, financial difficulties, sale of
-        a part of the business or inability to fulfil contractual obligations.
-        If the existing contractor is unable to carry on with the works
-        satisfactorily, you may consider novation.  </br></br> You should:</br>
-        (i)     Assess the novation request and whether the new contractor is
-        capable of undertaking the remaining services or supply of goods without
-        any change in contractual terms.</br> (ii)    Put up a recommendation
-        report to the original QAA/Tenders Board which approved the term
-        contract to proceed with the novation if the new contractor is assessed
-        to be suitable. </br> (iii)   Clear the “Novation Agreement” with Legal
-        dept. The Novation Agreement shall be signed by 3 parties i.e. URA, the
-        existing contractor and the new contractor. </br></br>  If the new
-        contractor is not capable of undertaking the works, you may decide not
-        to effect the novation and to terminate the contract according to the
-        contract terms and conditions, and call a new tender to carry out the
-        remaining services or supply of goods.
+  - text: "Novation is often the result of changed circumstances midway through the\
+      \ contract e.g. mergers and acquisitions, financial difficulties, sale of a\
+      \ part of the business or inability to fulfil contractual obligations. If the\
+      \ existing contractor is unable to carry on with the works satisfactorily, you\
+      \ may consider novation.  </br></br> You should:</br> (i)     Assess the novation\
+      \ request and whether the new contractor is capable of undertaking the remaining\
+      \ services or supply of goods without any change in contractual terms.</br>\
+      \ (ii)    Put up a recommendation report to the original QAA/Tenders Board which\
+      \ approved the term contract to proceed with the novation if the new contractor\
+      \ is assessed to be suitable. </br> (iii)   Clear the “Novation Agreement” with\
+      \ Legal dept. The Novation Agreement shall be signed by 3 parties i.e. URA,\
+      \ the existing contractor and the new contractor. </br></br>  If the new contractor\
+      \ is not capable of undertaking the works, you may decide not to effect the\
+      \ novation and to terminate the contract according to the contract terms and\
+      \ conditions, and call a new tender to carry out the remaining services or supply\
+      \ of goods.\n"
   utter_faq/FAQ-novation required for new company name in existing contract:
-  - text: >
-        The required action to be taken depends on what is meant by the “change
-        in company name”, and whether the legal personality of the company has
-        changed after the change in name. For example, if a person has changed
-        his name, he is still the same person, and there is no change in the
-        legal personality. Similarly, for a company that has changed its name
-        but everything else about the company is retained and unchanged, there
-        is no need for novation. A simple contract variation to account for the
-        change in name will suffice in this case.</br></br> However, in some
-        instances where company names are changed to signify a change in
-        management or even the entire organisation, for example in cases of
-        merger and acquisition, novation is necessary in order to transfer all
-        legal liabilities of the existing contract to the new legal personality.
+  - text: "The required action to be taken depends on what is meant by the “change\
+      \ in company name”, and whether the legal personality of the company has changed\
+      \ after the change in name. For example, if a person has changed his name, he\
+      \ is still the same person, and there is no change in the legal personality.\
+      \ Similarly, for a company that has changed its name but everything else about\
+      \ the company is retained and unchanged, there is no need for novation. A simple\
+      \ contract variation to account for the change in name will suffice in this\
+      \ case.</br></br> However, in some instances where company names are changed\
+      \ to signify a change in management or even the entire organisation, for example\
+      \ in cases of merger and acquisition, novation is necessary in order to transfer\
+      \ all legal liabilities of the existing contract to the new legal personality.\n"
   utter_faq/FAQ-debarment:
-  - text: >
-        No. Debarment is serious and cuts off Government procurement
-        opportunities for errant contractor. Hence, the IM only provides for
-        debarment of higher value purchases procured via tender.
+  - text: "No. Debarment is serious and cuts off Government procurement opportunities\
+      \ for errant contractor. Hence, the IM only provides for debarment of higher\
+      \ value purchases procured via tender.\n"
   utter_faq/FAQ-expenditure approval for G+S exempted from IM Proc:
-  - text: >
-        Goods & services under the exemption list are exempted from procurement
-        approach and the subsequent stages. However, you still need to seek
-        approval to incur expenditure.
+  - text: "Goods & services under the exemption list are exempted from procurement\
+      \ approach and the subsequent stages. However, you still need to seek approval\
+      \ to incur expenditure.\n"
   utter_faq/FAQ-shorten minimum quotation opening period:
-  - text: >
-        Yes, you can shorten the opening period by seek approval from CEO or
-        DCEO if you have good reasons.  The period of quotation shall not be
-        shortened after the Quotation Notice has been published or issued so
-        that suppliers are not caught unaware of the change in opening period
+  - text: "Yes, you can shorten the opening period by seek approval from CEO or DCEO\
+      \ if you have good reasons.  The period of quotation shall not be shortened\
+      \ after the Quotation Notice has been published or issued so that suppliers\
+      \ are not caught unaware of the change in opening period\n"
   utter_faq/FAQ-need report if not recommending for no award:
-  - text: >
-        There is still a need to put up quotation/tender report to seek approval
-        for no award and to post award notice in GeBIZ to inform tenderers of
-        the decision.
+  - text: "There is still a need to put up quotation/tender report to seek approval\
+      \ for no award and to post award notice in GeBIZ to inform tenderers of the\
+      \ decision.\n"
   utter_faq/FAQ-vendor to commence work before approval of report:
-  - text: >
-        Regardless of how urgent your needs are, you can only start work after
-        Quotation Approving Authority (QAA) / Tender Approving Authority (TAA
-        has approved your recommendation report. By commencing work before that,
-        the role of QAA/TAA is undermined and controls are bypassed.
+  - text: "Regardless of how urgent your needs are, you can only start work after\
+      \ Quotation Approving Authority (QAA) / Tender Approving Authority (TAA has\
+      \ approved your recommendation report. By commencing work before that, the role\
+      \ of QAA/TAA is undermined and controls are bypassed.\n"
   utter_faq/FAQ-preparing specifications:
-  - text: >
-        (a) Avoid specifying brand names or product models, or otherwise state
-        "or equivalent" if there is no other sufficiently precise or
-        intelligible way of describing the requirement.</br> (b) Refrain from
-        taking specifications wholesale from suppliers</br> (c) Avoid
-        “over-specs” (e.g. include unnecessary requirements)</br> (d) State
-        upfront the evaluation criteria and weightage assigned </br></br> Please
-        refer to <a
-        href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-3-Specifying-Requirements/Topics/REQUIREMENT-SPECIFICATIONS-(OR-SCOPE-OF-WORK).aspx'
-        target='_blank'>IM on Procurement, Stage 3 Rule 1.1</a> for details.
+  - text: "(a) Avoid specifying brand names or product models, or otherwise state\
+      \ \"or equivalent\" if there is no other sufficiently precise or intelligible\
+      \ way of describing the requirement.</br> (b) Refrain from taking specifications\
+      \ wholesale from suppliers</br> (c) Avoid “over-specs” (e.g. include unnecessary\
+      \ requirements)</br> (d) State upfront the evaluation criteria and weightage\
+      \ assigned </br></br> Please refer to <a href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-3-Specifying-Requirements/Topics/REQUIREMENT-SPECIFICATIONS-(OR-SCOPE-OF-WORK).aspx'\
+      \ target='_blank'>IM on Procurement, Stage 3 Rule 1.1</a> for details.\n"
   utter_faq/FAQ-collecting Security Deposits:
-  - text: >
-        Security Deposit (SD) is a safeguard in tender to ensure that the
-        supplier delivers his supplies or perform his services promptly in
-        accordance with the terms and conditions of the contract.  </br></br>
-        For contracts with EPV equal to or below $500,000:SD shall be
-        waived.</br></br> For contracts with EPV exceeding $500,000:Line
-        department shall assess the risks of procurement and determine if there
-        is a need to collect SD. Refer to <a target='_blank'
-        href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-3-Specifying-Requirements/Topics/SECURITY-DEPOSIT.aspx'>IM
-        on Procurement, Rule 6 on Security Deposit </a> for details. </br></br>
-        The following are examples of where SD can be waived:</br>  (a) where
-        the goods, services and construction services are provided by another
-        GPE i.e. a ministry, government department, organs of state or a
-        statutory board.</br></br>  (b) when the tender is for those
-        professional services controlled by recognised bodies for example, the
-        Singapore Medical Council, Singapore Dental Board, Board of Architects,
-        Professional Engineers Board, Accounting and Corporate Regulatory
-        Authority, Land Surveyors Board and Law Society of Singapore;</br></br> 
-        (c) where payment is made only after satisfactory delivery of goods and
-        services, and/or where the risk and consequences of default are assessed
-        to be negligible or acceptable to the GPE;</br></br>  (d) when there is
-        cost-saving by waiving the security deposit, and the risk is
-        manageable.</br></br>  (e) For consultancy services in construction
-        projects, GPEs should in general not impose any security deposits on
-        consultants listed under the Public Sector Panel of Consultants (PSPC)
-        for all disciplines, including quantity surveying and project management
-        services.  This is because consultants' performance is often centred on
-        their professional competency. As most consultants would have taken up
-        Professional Indemnity (PI) insurance for professional negligence, the
-        PI coverage would usually suffice. This would also align our practice to
-        the industry norm. </br></br>
+  - text: "Security Deposit (SD) is a safeguard in tender to ensure that the supplier\
+      \ delivers his supplies or perform his services promptly in accordance with\
+      \ the terms and conditions of the contract.  </br></br> For contracts with EPV\
+      \ equal to or below $500,000:SD shall be waived.</br></br> For contracts with\
+      \ EPV exceeding $500,000:Line department shall assess the risks of procurement\
+      \ and determine if there is a need to collect SD. Refer to <a target='_blank'\
+      \ href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-3-Specifying-Requirements/Topics/SECURITY-DEPOSIT.aspx'>IM\
+      \ on Procurement, Rule 6 on Security Deposit </a> for details. </br></br> The\
+      \ following are examples of where SD can be waived:</br>  (a) where the goods,\
+      \ services and construction services are provided by another GPE i.e. a ministry,\
+      \ government department, organs of state or a statutory board.</br></br>  (b)\
+      \ when the tender is for those professional services controlled by recognised\
+      \ bodies for example, the Singapore Medical Council, Singapore Dental Board,\
+      \ Board of Architects, Professional Engineers Board, Accounting and Corporate\
+      \ Regulatory Authority, Land Surveyors Board and Law Society of Singapore;</br></br>\
+      \  (c) where payment is made only after satisfactory delivery of goods and services,\
+      \ and/or where the risk and consequences of default are assessed to be negligible\
+      \ or acceptable to the GPE;</br></br>  (d) when there is cost-saving by waiving\
+      \ the security deposit, and the risk is manageable.</br></br>  (e) For consultancy\
+      \ services in construction projects, GPEs should in general not impose any security\
+      \ deposits on consultants listed under the Public Sector Panel of Consultants\
+      \ (PSPC) for all disciplines, including quantity surveying and project management\
+      \ services.  This is because consultants' performance is often centred on their\
+      \ professional competency. As most consultants would have taken up Professional\
+      \ Indemnity (PI) insurance for professional negligence, the PI coverage would\
+      \ usually suffice. This would also align our practice to the industry norm.\
+      \ </br></br>\n"
   utter_faq/FAQ-changing Conditions of Contract (COC):
-  - text: >
-        The COC are cleared by AGC, where there is a list of optional clauses
-        which can be included or excluded, depending on the requirements. If
-        there are other changes to the COC, please clear with Legal.
+  - text: "The COC are cleared by AGC, where there is a list of optional clauses which\
+      \ can be included or excluded, depending on the requirements. If there are other\
+      \ changes to the COC, please clear with Legal.\n"
   utter_faq/FAQ-guidelines on the cap for limiting liabilities:
-  - text: >
-        The default position should be to remain silent on the capping of
-        liabilities. Remaining silent on the capping of damages and liabilities
-        does not mean that the vendor bears unlimited risks. Leaving it silent
-        just means that in the event of damages or liabilities, the amount that
-        the vendor is liable for will be determined by the courts, depending on
-        legal precedents and what is reasonable.</br></br>  If the line
-        department assesses that it is necessary to set a cap on the
-        liabilities, this has to be done after carefully analyzing the risks for
-        that procurement. The effect of such a limitation clause is that the
-        Government will be underwriting some of the contractor’s liability. In
-        view that the risks involved for each procurement differs, it is not
-        possible to set any “norms”.  Line department would also have to specify
-        the limit based on the nature and value of the tender as well as the
-        risks to URA in the event of a breach.  It is advisable that no dollar
-        figure be quoted but a percentage of the contract value be stated as the
-        limit to the contactor’s liabilities in the contract.
+  - text: "The default position should be to remain silent on the capping of liabilities.\
+      \ Remaining silent on the capping of damages and liabilities does not mean that\
+      \ the vendor bears unlimited risks. Leaving it silent just means that in the\
+      \ event of damages or liabilities, the amount that the vendor is liable for\
+      \ will be determined by the courts, depending on legal precedents and what is\
+      \ reasonable.</br></br>  If the line department assesses that it is necessary\
+      \ to set a cap on the liabilities, this has to be done after carefully analyzing\
+      \ the risks for that procurement. The effect of such a limitation clause is\
+      \ that the Government will be underwriting some of the contractor’s liability.\
+      \ In view that the risks involved for each procurement differs, it is not possible\
+      \ to set any “norms”.  Line department would also have to specify the limit\
+      \ based on the nature and value of the tender as well as the risks to URA in\
+      \ the event of a breach.  It is advisable that no dollar figure be quoted but\
+      \ a percentage of the contract value be stated as the limit to the contactor’s\
+      \ liabilities in the contract.\n"
   utter_faq/FAQ-disqualification for bids higher than EPV:
-  - text: >
-        You should not automatically disqualify tenderers on the sole basis that
-        bids exceeded EPV. Please continue to assess based on the evaluation
-        criteria stated upfront. If the recommended bid is higher than EPV, you
-        can seek approval to increase the EPV.
+  - text: "You should not automatically disqualify tenderers on the sole basis that\
+      \ bids exceeded EPV. Please continue to assess based on the evaluation criteria\
+      \ stated upfront. If the recommended bid is higher than EPV, you can seek approval\
+      \ to increase the EPV.\n"
   utter_faq/FAQ-considered procurement if collab with other govt agencies:
-  - text: >
-        When GPEs collaborate with other GPEs, there is no intent of parties to
-        form legal relations with each other. So procurement rules do not apply.
-        GPEs can consider using email exchanges, notes/minutes of meeting or
-        non-legalistic Memorandum of Understanding between GPEs to list down the
-        roles, responsibilities, funding/manpower commitments and scope of the
-        collaboration where necessary.
+  - text: "When GPEs collaborate with other GPEs, there is no intent of parties to\
+      \ form legal relations with each other. So procurement rules do not apply. GPEs\
+      \ can consider using email exchanges, notes/minutes of meeting or non-legalistic\
+      \ Memorandum of Understanding between GPEs to list down the roles, responsibilities,\
+      \ funding/manpower commitments and scope of the collaboration where necessary.\n"
   utter_faq/FAQ-minimum quotation opening period applicable to Request for Quotation:
-  - text: >
-        No, the minimum quotation opening period is not applicable to RFQ.
-        Nonetheless, the time given to the suppliers to respond to the RFQ must
-        be of a reasonable period. If there is a minimum opening period
-        specified in the framework agreement, please adhere to the contracted
-        RFQ opening period. You should contact the contract administrator for
-        clarifications on such contract terms.
+  - text: "No, the minimum quotation opening period is not applicable to RFQ. Nonetheless,\
+      \ the time given to the suppliers to respond to the RFQ must be of a reasonable\
+      \ period. If there is a minimum opening period specified in the framework agreement,\
+      \ please adhere to the contracted RFQ opening period. You should contact the\
+      \ contract administrator for clarifications on such contract terms.\n"
   utter_faq/FAQ-A49:
-  - text: >
-        In this instance you can specify a lower financial category for each of
-        the tenderers since your intent is to award to a panel of suppliers. You
-        can consider using the average contract value based on an estimated
-        panel size to gauge a suitable financial category.
+  - text: "In this instance you can specify a lower financial category for each of\
+      \ the tenderers since your intent is to award to a panel of suppliers. You can\
+      \ consider using the average contract value based on an estimated panel size\
+      \ to gauge a suitable financial category.\n"
   utter_faq/FAQ-minimum number of suppliers to alert when publishing quotation or tender:
-  - text: >
-        No, there is no minimum number of suppliers you need to alert. You
-        should try to tap on the widest possible supplier base and alert as many
-        as practicable.
+  - text: "No, there is no minimum number of suppliers you need to alert. You should\
+      \ try to tap on the widest possible supplier base and alert as many as practicable.\n"
   utter_faq/FAQ-other platforms to conduct procurement:
-  - text: >
-        No, GeBIZ remains the only platform for all government procurement to be
-        performed, although we can use other platforms to further publicise the
-        procurement opportunities.
+  - text: "No, GeBIZ remains the only platform for all government procurement to be\
+      \ performed, although we can use other platforms to further publicise the procurement\
+      \ opportunities.\n"
   utter_faq/FAQ-A52:
-  - text: >
-        The purpose of alerting suppliers is to bring to attention a procurement
-        opportunity which has already been published openly. You should try to
-        alert as many suppliers as practicable after the invitation to
-        quotation/tender has been published on GeBIZ. This is to avoid being
-        seen as biased towards the notified suppliers.  While doing so, please
-        ensure that the notified suppliers do not receive additional information
-        on top of those already published in the quotation/tender in order to
-        ensure fairness and transparency.
+  - text: "The purpose of alerting suppliers is to bring to attention a procurement\
+      \ opportunity which has already been published openly. You should try to alert\
+      \ as many suppliers as practicable after the invitation to quotation/tender\
+      \ has been published on GeBIZ. This is to avoid being seen as biased towards\
+      \ the notified suppliers.  While doing so, please ensure that the notified suppliers\
+      \ do not receive additional information on top of those already published in\
+      \ the quotation/tender in order to ensure fairness and transparency.\n"
   utter_faq/FAQ-A53:
-  - text: >
-        For EPV up to $70,000, QAA is the approving authority to approve the use
-        of Limited Quotation or Direct Contracting.</br></br> For EPV beyond
-        $70,000, CEO/DCEO is the approving authority to approve the use of
-        Limited Tender or Direct Contracting.
+  - text: "For EPV up to $70,000, QAA is the approving authority to approve the use\
+      \ of Limited Quotation or Direct Contracting.</br></br> For EPV beyond $70,000,\
+      \ CEO/DCEO is the approving authority to approve the use of Limited Tender or\
+      \ Direct Contracting.\n"
   utter_faq/FAQ-approval to further reduce the minimum tender opening period:
-  - text: >
-        In exceptional circumstances where there is extreme urgency to meet
-        critical operational deadlines, the minimum period of tender may be
-        reduced to not less than 10 days with prior approval of the CEO/DCEO,
-        when it is due to the following situations:</br> (a) safety
-        consideration; or</br> (b) it is in the general public interest.</br>
-        (refer to <a target='_blank'
-        href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/TENDER-–-TENDER-OPENING-PERIOD.aspx'>IM
-        on Procurement, Stage 4 Rule 6.2.1</a> and <a target='_blank'
-        href='https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Finance%20Policies/Financial-Operation-Manual.aspx#502'>FOM
-        502(1)</a>)
+  - text: "In exceptional circumstances where there is extreme urgency to meet critical\
+      \ operational deadlines, the minimum period of tender may be reduced to not\
+      \ less than 10 days with prior approval of the CEO/DCEO, when it is due to the\
+      \ following situations:</br> (a) safety consideration; or</br> (b) it is in\
+      \ the general public interest.</br> (refer to <a target='_blank' href='https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/TENDER-–-TENDER-OPENING-PERIOD.aspx'>IM\
+      \ on Procurement, Stage 4 Rule 6.2.1</a> and <a target='_blank' href='https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Finance%20Policies/Financial-Operation-Manual.aspx#502'>FOM\
+      \ 502(1)</a>)\n"
   utter_faq/FAQ-non GPA or FTA-covered tenders minimum tendering period:
-  - text: >
-        Procurement which is not covered under GPA or FTA need not comply with the
-        obligations in the international agreements, hence a minimum of 14 days
-        is permitted. You must still give sufficient time for tenderers to
-        submit a response to the tender.
+  - text: "Procurement which is not covered under GPA or FTA need not comply with\
+      \ the obligations in the international agreements, hence a minimum of 14 days\
+      \ is permitted. You must still give sufficient time for tenderers to submit\
+      \ a response to the tender.\n"
   utter_faq/FAQ-bringing forward tender closing date with all tenderers submitting their proposals:
-  - text: >
-        No, you cannot do so.  This is because any of the x tenderers is
-        entitled to submit a fresh proposal which replaces or overwrites the
-        earlier one, as long as he does so before the tender closing date and
-        time.
+  - text: "No, you cannot do so.  This is because any of the x tenderers is entitled\
+      \ to submit a fresh proposal which replaces or overwrites the earlier one, as\
+      \ long as he does so before the tender closing date and time.\n"
   utter_faq/FAQ-waiving liquidated damages (LDs):
-  - text: >
-        For consultancy services in construction projects, the department
-        should, in general, not impose LDs on consultants listed under the
-        Public Sector Panel of Consultants (PSPC) for all disciplines, including
-        quantity surveying and project management services.  This is because
-        consultants are typically engaged ahead of the construction phase and
-        usually with some float time available. Consultants' performance also
-        depends on when and how the department engages them. It is often not
-        possible to ascertain if project delays can be specifically attributed
-        to the consultants for construction projects.   Additionally, it is also
-        the industry norm not to impose LDs on construction consultancy tenders.
+  - text: "For consultancy services in construction projects, the department should,\
+      \ in general, not impose LDs on consultants listed under the Public Sector Panel\
+      \ of Consultants (PSPC) for all disciplines, including quantity surveying and\
+      \ project management services.  This is because consultants are typically engaged\
+      \ ahead of the construction phase and usually with some float time available.\
+      \ Consultants' performance also depends on when and how the department engages\
+      \ them. It is often not possible to ascertain if project delays can be specifically\
+      \ attributed to the consultants for construction projects.   Additionally, it\
+      \ is also the industry norm not to impose LDs on construction consultancy tenders.\n"
   utter_faq/FAQ-deciding if qualified bids should be allowed:
-  - text: >
-        You should consider the type of goods/services they are procuring and
-        the nature of the industry. For example, when purchasing
-        commercial-off-the-shelf items where evaluation is fairly
-        straightforward and usually based solely on price, and where it is
-        expected that there could be numerous tenderers, allowing for qualified
-        bids may not be necessary. However, where the nature of the purchase is
-        complex and it is expected that our standard terms and conditions may
-        not fully address certain industry terms and conditions, allowing for
-        qualified bids can be considered. </br></br> If there are any
-        requirements or clauses which are deemed essential, it should be made
-        clear in the quotation/tender documents that these are mandatory and not
-        to be varied by the tenderer. Proposals which vary such essential
-        requirements should then be deemed as invalid and excluded from further
-        evaluation. Examples of requirements or clauses which may be considered
-        as essential could include tender validity, applicable law, IP ownership
-        etc.
+  - text: "You should consider the type of goods/services they are procuring and the\
+      \ nature of the industry. For example, when purchasing commercial-off-the-shelf\
+      \ items where evaluation is fairly straightforward and usually based solely\
+      \ on price, and where it is expected that there could be numerous tenderers,\
+      \ allowing for qualified bids may not be necessary. However, where the nature\
+      \ of the purchase is complex and it is expected that our standard terms and\
+      \ conditions may not fully address certain industry terms and conditions, allowing\
+      \ for qualified bids can be considered. </br></br> If there are any requirements\
+      \ or clauses which are deemed essential, it should be made clear in the quotation/tender\
+      \ documents that these are mandatory and not to be varied by the tenderer. Proposals\
+      \ which vary such essential requirements should then be deemed as invalid and\
+      \ excluded from further evaluation. Examples of requirements or clauses which\
+      \ may be considered as essential could include tender validity, applicable law,\
+      \ IP ownership etc.\n"
   utter_faq/FAQ-differentiating tenderers with different qualification degrees or aspects of the Tender:
-  - text: >
-        If qualified bids are allowed, you should make clear in the evaluation
-        criteria how variations made by the Tenderer will be evaluated and how
-        it will take into account any additional risk or cost to URA as a result
-        of the qualifications.  For example, it must be made clear to tenderers
-        that proposals with variations to the Conditions of Contracts may be
-        scored lower compared to proposals that are fully compliant, and those
-        with qualifications that give rise to substantial impact to URA would be
-        scored lower than those that do not. </br></br> Tenderers can also be
-        instructed to explicitly provide additional cost, for full compliance to
-        the Tender clauses so you are able to make a better assessment of the
-        trade-offs.
+  - text: "If qualified bids are allowed, you should make clear in the evaluation\
+      \ criteria how variations made by the Tenderer will be evaluated and how it\
+      \ will take into account any additional risk or cost to URA as a result of the\
+      \ qualifications.  For example, it must be made clear to tenderers that proposals\
+      \ with variations to the Conditions of Contracts may be scored lower compared\
+      \ to proposals that are fully compliant, and those with qualifications that\
+      \ give rise to substantial impact to URA would be scored lower than those that\
+      \ do not. </br></br> Tenderers can also be instructed to explicitly provide\
+      \ additional cost, for full compliance to the Tender clauses so you are able\
+      \ to make a better assessment of the trade-offs.\n"
   utter_faq/FAQ-invoking of Limited Tender during extreme urgency:
-  - text: >
-        Extreme urgency refers to situations or events that are beyond the
-        reasonable contemplation of agencies or which occur suddenly, and the
-        timing of the intended procurement has impact to the proper functioning
-        of the Government. Some examples include unexpected situations which has
-        impact on public health, public safety, national or homeland security;
-        Or disruptions of on-going contracts due to unexpected default by
-        contractors. However, this ground should not be used loosely, for
-        example, to justify internal deadlines due to a lack of planning or
-        delays by the department in calling the procurements.
+  - text: "Extreme urgency refers to situations or events that are beyond the reasonable\
+      \ contemplation of agencies or which occur suddenly, and the timing of the intended\
+      \ procurement has impact to the proper functioning of the Government. Some examples\
+      \ include unexpected situations which has impact on public health, public safety,\
+      \ national or homeland security; Or disruptions of on-going contracts due to\
+      \ unexpected default by contractors. However, this ground should not be used\
+      \ loosely, for example, to justify internal deadlines due to a lack of planning\
+      \ or delays by the department in calling the procurements.\n"
   utter_faq/FAQ-request tenderers to extend their offer validity more than once:
-  - text: >
-        The IM on Procurement does not stipulate a cap on the number of
-        extensions. Nevertheless, departments should request for further
-        extensions only if they have reasonable grounds to do so, as tenderers
-        are under no obligation to agree to their request for extension of
-        tender/quotation validity period beyond what the departments have
-        specified for in the ITQ/ITT, as these are commercial decisions.
+  - text: "The IM on Procurement does not stipulate a cap on the number of extensions.\
+      \ Nevertheless, departments should request for further extensions only if they\
+      \ have reasonable grounds to do so, as tenderers are under no obligation to\
+      \ agree to their request for extension of tender/quotation validity period beyond\
+      \ what the departments have specified for in the ITQ/ITT, as these are commercial\
+      \ decisions.\n"
   utter_faq/FAQ-bid amendment:
-  - text: >
-        In the event that any errors (including omissions) are discovered during
-        evaluation and after the quotation/tender has closed, the erroneous bid
-        may be corrected with the approval of the Approving Officer (Bid
-        Amendment). Departments have to assess that the following conditions are
-        met before a bid amendment can be considered:</br> a) It is a genuine
-        error; and</br> b) It does not give rise to discriminatory or unfair
-        practices.</br></br>  In assessing whether there is a genuine error,
-        Departments can consider if there are supporting indications that
-        suggest that there is likely to be a genuine error. </br></br> Also,
-        please note that omitted factual documents can be accepted via
-        clarifications and approval for bid amendment is not necessary. Refer to
-        flowchart below to determine if approval for bid amendment is required
-        and the appropriate Approving Officer (Bid Amendment)
+  - text: "In the event that any errors (including omissions) are discovered during\
+      \ evaluation and after the quotation/tender has closed, the erroneous bid may\
+      \ be corrected with the approval of the Approving Officer (Bid Amendment). Departments\
+      \ have to assess that the following conditions are met before a bid amendment\
+      \ can be considered:</br> a) It is a genuine error; and</br> b) It does not\
+      \ give rise to discriminatory or unfair practices.</br></br>  In assessing whether\
+      \ there is a genuine error, Departments can consider if there are supporting\
+      \ indications that suggest that there is likely to be a genuine error. </br></br>\
+      \ Also, please note that omitted factual documents can be accepted via clarifications\
+      \ and approval for bid amendment is not necessary. Refer to flowchart below\
+      \ to determine if approval for bid amendment is required and the appropriate\
+      \ Approving Officer (Bid Amendment)\n"
   utter_faq/FAQ-level of approval for bid amendment:
-  - text: >
-        The bid amendments have to be approved by the following Approving
-        Officer (Bid Amendment) before seeking approval of award for the
-        quotation/tender. </br></br> a) CEO</br> For pricing
-        alterations</br></br>  b) DCEO</br> For non-pricing alterations (e.g. to
-        accept non-factual documents that were omitted in the proposal for
-        further evaluation)</br></br>  c) Dir (Finance)</br> For pricing
-        alterations due to genuine errors that can be verified against the
-        supporting documents (e.g. typo errors, calculation errors)
+  - text: "The bid amendments have to be approved by the following Approving Officer\
+      \ (Bid Amendment) before seeking approval of award for the quotation/tender.\
+      \ </br></br> a) CEO</br> For pricing alterations</br></br>  b) DCEO</br> For\
+      \ non-pricing alterations (e.g. to accept non-factual documents that were omitted\
+      \ in the proposal for further evaluation)</br></br>  c) Dir (Finance)</br> For\
+      \ pricing alterations due to genuine errors that can be verified against the\
+      \ supporting documents (e.g. typo errors, calculation errors)\n"
   utter_faq/FAQ-using bid amendment to correct bid error:
-  - text: >
-        The following must be met before a bid amendment could be
-        considered:</br> a) It is a genuine error; and</br> b) It does not give
-        rise to discriminatory or unfair practices.</br></br>  Whether the bid
-        amendment affects a tenderer’s compliance with any criterion, even if it
-        is a critical criterion, is immaterial.
+  - text: "The following must be met before a bid amendment could be considered:</br>\
+      \ a) It is a genuine error; and</br> b) It does not give rise to discriminatory\
+      \ or unfair practices.</br></br>  Whether the bid amendment affects a tenderer’s\
+      \ compliance with any criterion, even if it is a critical criterion, is immaterial.\n"
   utter_faq/FAQ-tenderer doesn't provide evidence to support error was genuine:
-  - text: >
-        If the department cannot ascertain that there is a genuine error or
-        assessed that the bid amendment should not be carried out, there is no
-        need to consider doing bid amendments.</br></br>  In such cases, the
-        department may evaluate the proposal based on the tenderer’s original
-        bid.
+  - text: "If the department cannot ascertain that there is a genuine error or assessed\
+      \ that the bid amendment should not be carried out, there is no need to consider\
+      \ doing bid amendments.</br></br>  In such cases, the department may evaluate\
+      \ the proposal based on the tenderer’s original bid.\n"
   utter_faq/FAQ-A66:
-  - text: >
-        Approval from AO(Bid Amendment) is not required to rectify the nominal
-        bid price on GeBIZ as there is no actual amendment made to the bid
-        price. However, Departments must highlight the details of the correction
-        in the quotation/tender report. Finance will correct the nominal bid
-        price on GeBIZ.</br></br>  If there are price discrepancies between a
-        tenderer’s price on GeBIZ and their attached documents, and there are
-        doubts on which is the correct bid price, Departments should seek
-        clarification from the tenderer.</br></br>  Departments can try to
-        minimise the occurrence of tenderers placing nominal bid prices on GeBIZ
-        by having clear instructions in the ITQ/ITT and reducing the number of
-        line items on GeBIZ, where feasible.
+  - text: "Approval from AO(Bid Amendment) is not required to rectify the nominal\
+      \ bid price on GeBIZ as there is no actual amendment made to the bid price.\
+      \ However, Departments must highlight the details of the correction in the quotation/tender\
+      \ report. Finance will correct the nominal bid price on GeBIZ.</br></br>  If\
+      \ there are price discrepancies between a tenderer’s price on GeBIZ and their\
+      \ attached documents, and there are doubts on which is the correct bid price,\
+      \ Departments should seek clarification from the tenderer.</br></br>  Departments\
+      \ can try to minimise the occurrence of tenderers placing nominal bid prices\
+      \ on GeBIZ by having clear instructions in the ITQ/ITT and reducing the number\
+      \ of line items on GeBIZ, where feasible.\n"
   utter_faq/FAQ-A67:
-  - text: >
-        Departments may accept the clarifications provided that it does not give
-        rise to unfair practices (e.g. preferential treatment given only to
-        selected tenderers). Approval from AO (Bid Amendment) is not required.
-        However, the withdrawal of qualification will still need to be
-        highlighted in the quotation/tender report.</br></br>  The intent of
-        having a single set of COC/requirements for the quotation/tender is to
-        ensure that tenderers could compete fairly on a level playing field. If
-        the tenderer agrees to withdraw the qualifications after clarification,
-        it brings their bid back to a level playing field which is in compliance
-        with the COC/requirements.
+  - text: "Departments may accept the clarifications provided that it does not give\
+      \ rise to unfair practices (e.g. preferential treatment given only to selected\
+      \ tenderers). Approval from AO (Bid Amendment) is not required. However, the\
+      \ withdrawal of qualification will still need to be highlighted in the quotation/tender\
+      \ report.</br></br>  The intent of having a single set of COC/requirements for\
+      \ the quotation/tender is to ensure that tenderers could compete fairly on a\
+      \ level playing field. If the tenderer agrees to withdraw the qualifications\
+      \ after clarification, it brings their bid back to a level playing field which\
+      \ is in compliance with the COC/requirements.\n"
   utter_faq/FAQ-bid amendment required to correct error of tenderer not meeting all requirements:
-  - text: >
-        Approval for bid amendment is not required. However, Departments will
-        still need to seek clarification with the tenderer on why they had
-        indicated non-compliance to ensure that the tenderers had submitted
-        their bid proposals with an accurate understanding of the requirements
-        in the ITQ/ITT. The details of the clarification are to be included in
-        the quotation/tender report.
+  - text: "Approval for bid amendment is not required. However, Departments will still\
+      \ need to seek clarification with the tenderer on why they had indicated non-compliance\
+      \ to ensure that the tenderers had submitted their bid proposals with an accurate\
+      \ understanding of the requirements in the ITQ/ITT. The details of the clarification\
+      \ are to be included in the quotation/tender report.\n"
   utter_faq/FAQ-difference between 2-Stage tendering and negotiations:
-  - text: >
-        In 2-Stage tendering, there is no negotiation involved.  The revisions
-        to the tender specifications or terms are initiated by the department.
-        Essentially the department decides on what to be revised and all
-        eligible tenderers are required to submit their new bids which have to
-        comply fully with the revised tender.
+  - text: "In 2-Stage tendering, there is no negotiation involved.  The revisions\
+      \ to the tender specifications or terms are initiated by the department. Essentially\
+      \ the department decides on what to be revised and all eligible tenderers are\
+      \ required to submit their new bids which have to comply fully with the revised\
+      \ tender.\n"
   utter_faq/FAQ-unauthorized officer signs contract:
-  - text: >
-        In law, only officers authorized under the Government Contract are
-        authorized to bind the Government to legal agreements.  A person who
-        purports to bind the Government to a legal transaction which he is not
-        authorized to do would be personally liable to the other contracting
-        party for any liability arising out of that agreement.
+  - text: "In law, only officers authorized under the Government Contract are authorized\
+      \ to bind the Government to legal agreements.  A person who purports to bind\
+      \ the Government to a legal transaction which he is not authorized to do would\
+      \ be personally liable to the other contracting party for any liability arising\
+      \ out of that agreement.\n"
   utter_faq/FAQ-date of award taken as date of establishing contract:
-  - text: >
-        The Award Notice is published for the public’s information. URA still
-        needs to communicate the award to the successful supplier(s) via a
-        contracting instrument. It is only reasonable that the successful
-        supplier(s) know the result of the award before or, at the very least,
-        the same time as the public. The date of tender/quotation authority’s
-        approval is internal within URA and is usually before the contracting
-        instrument is given to the successful supplier(s). So, publishing the
-        Award Notice 3 days from tender/quotation approval date would
-        potentially be informing the award decision to the public before the
-        successful supplier(s).
+  - text: "The Award Notice is published for the public’s information. URA still needs\
+      \ to communicate the award to the successful supplier(s) via a contracting instrument.\
+      \ It is only reasonable that the successful supplier(s) know the result of the\
+      \ award before or, at the very least, the same time as the public. The date\
+      \ of tender/quotation authority’s approval is internal within URA and is usually\
+      \ before the contracting instrument is given to the successful supplier(s).\
+      \ So, publishing the Award Notice 3 days from tender/quotation approval date\
+      \ would potentially be informing the award decision to the public before the\
+      \ successful supplier(s).\n"
   utter_faq/FAQ-case for debarment when terminating contract:
-  - text: >
-        If it is the department who wants to terminate the contract and the
-        contractor has not defaulted in its contractual performance, then there
-        is no need to put up the case for debarment.
+  - text: "If it is the department who wants to terminate the contract and the contractor\
+      \ has not defaulted in its contractual performance, then there is no need to\
+      \ put up the case for debarment.\n"
   utter_faq/FAQ-terminating a contract:
-  - text: >
-        For termination according to specific terms in contract, please seek
-        CEO’s approval.</br> For reasons other than the violating of the
-        contract terms, Legal must be consulted on proposed termination. If
-        termination is in order, you can then seek approval from original QAA
-        (for quotation value contract) or TAA(for tender value contract).
+  - text: "For termination according to specific terms in contract, please seek CEO’s\
+      \ approval.</br> For reasons other than the violating of the contract terms,\
+      \ Legal must be consulted on proposed termination. If termination is in order,\
+      \ you can then seek approval from original QAA (for quotation value contract)\
+      \ or TAA(for tender value contract).\n"
   utter_faq/FAQ-contractor submit own quotes for star rate works:
-  - text: >
-        The guiding principle when receiving quotations for star rate works,
-        besides getting value for money (VfM), is to ensure that there is no
-        conflict of interest when the contractor carrying out the works also
-        submits his own quotes. The contractor can call 3 quotes if he does not
-        participate in the quotation. However, if the contractor decides to
-        participate in the quotation, the consultant shall assist URA to obtain
-        3 separate quotes and ensure that the star rate item is valued at fair
-        market rate.
+  - text: "The guiding principle when receiving quotations for star rate works, besides\
+      \ getting value for money (VfM), is to ensure that there is no conflict of interest\
+      \ when the contractor carrying out the works also submits his own quotes. The\
+      \ contractor can call 3 quotes if he does not participate in the quotation.\
+      \ However, if the contractor decides to participate in the quotation, the consultant\
+      \ shall assist URA to obtain 3 separate quotes and ensure that the star rate\
+      \ item is valued at fair market rate.\n"
   utter_faq/FAQ-guidelines for proprietary products:
-  - text: >
-        For proprietary products, it is acceptable to use a star rate based on
-        sole supplier’s invoice/quotation. Generally, only quotations which are
-        reasonable and reflective of market prices should be considered.
-        Quotations which are extreme in value should not be considered. The
-        consultants shall exercise discretion and professional judgement to
-        sieve out quotations deemed not reflective of market prices. </br></br>
-        Proper records shall be kept on the above and forwarded to the
-        contracting agency for retention and reference.
+  - text: "For proprietary products, it is acceptable to use a star rate based on\
+      \ sole supplier’s invoice/quotation. Generally, only quotations which are reasonable\
+      \ and reflective of market prices should be considered. Quotations which are\
+      \ extreme in value should not be considered. The consultants shall exercise\
+      \ discretion and professional judgement to sieve out quotations deemed not reflective\
+      \ of market prices. </br></br> Proper records shall be kept on the above and\
+      \ forwarded to the contracting agency for retention and reference.\n"
   utter_faq/FAQ-A74:
-  - text: >
-        There is no fixed quantum on what constitutes the bulk or substantial
-        percentage of works done using star rates. The departments will have to
-        exercise their judgement, taking into consideration if it is in the best
-        interest to carry out the works as star rate items. Some factors to
-        consider include if there are project-specific factors (e.g. site
-        limitations may not allow another contractor to work concurrently) and
-        if the government is getting value for money in going for star rates.
+  - text: "There is no fixed quantum on what constitutes the bulk or substantial percentage\
+      \ of works done using star rates. The departments will have to exercise their\
+      \ judgement, taking into consideration if it is in the best interest to carry\
+      \ out the works as star rate items. Some factors to consider include if there\
+      \ are project-specific factors (e.g. site limitations may not allow another\
+      \ contractor to work concurrently) and if the government is getting value for\
+      \ money in going for star rates.\n"
   utter_faq/FAQ-key principles of Government Procurement:
-  - text: >
-        The three key principles of Government Procurement are:</br> (a) Open
-        and Fair Competition-Provide fair access opportunities to suppliers to
-        compete on a level playing field</br> (b) Transparency-Make known
-        procurement objectives, criteria and procedures to suppliers</br> (c)
-        Value for Money (VFM)-Procure from suppliers who can best meet
-        requirements while offering best value and VFM does not necessarily mean
-        awarding to the lowest bidder
+  - text: "The three key principles of Government Procurement are:</br> (a) Open and\
+      \ Fair Competition-Provide fair access opportunities to suppliers to compete\
+      \ on a level playing field</br> (b) Transparency-Make known procurement objectives,\
+      \ criteria and procedures to suppliers</br> (c) Value for Money (VFM)-Procure\
+      \ from suppliers who can best meet requirements while offering best value and\
+      \ VFM does not necessarily mean awarding to the lowest bidder\n"
   utter_faq/FAQ-GeBIZ:
-  - text: >
-        GeBIZ is one-stop business centre for suppliers to access business
-        opportunities and transact with the Government. All procurement shall be
-        made through GeBIZ, other than the exceptions as follows:</br> (a) when
-        GPEs make Small Value Purchase; or</br> (b) when the procurement is from
-        a sole supplier that is not a GeBIZ Trading Partner (GTP) ; or</br> (c)
-        where the context of the Intended GP cannot be supported by the use of
-        GeBIZ (e.g. technological constraints or market peculiarities)
+  - text: "GeBIZ is one-stop business centre for suppliers to access business opportunities\
+      \ and transact with the Government. All procurement shall be made through GeBIZ,\
+      \ other than the exceptions as follows:</br> (a) when GPEs make Small Value\
+      \ Purchase; or</br> (b) when the procurement is from a sole supplier that is\
+      \ not a GeBIZ Trading Partner (GTP) ; or</br> (c) where the context of the Intended\
+      \ GP cannot be supported by the use of GeBIZ (e.g. technological constraints\
+      \ or market peculiarities)\n"
   utter_faq/FAQ-approving expenditure paper:
-  - text: >
-        Under FOM 401, the approving authorities for incurring expenditure are
-        as follows based on the estimated procurement value:</br></br>
-        Director:Up to $30,000</br> Senior Director:Up to $80,000</br> Group
-        Director:Up to $150,000</br> DCEO:Up to $500,000</br> CEO:Up to
-        $1mil</br> Chairman:Up to $10mil</br> Board:Exceeding $10mil</br>
+  - text: "Under FOM 401, the approving authorities for incurring expenditure are\
+      \ as follows based on the estimated procurement value:</br></br> Director:Up\
+      \ to $30,000</br> Senior Director:Up to $80,000</br> Group Director:Up to $150,000</br>\
+      \ DCEO:Up to $500,000</br> CEO:Up to $1mil</br> Chairman:Up to $10mil</br> Board:Exceeding\
+      \ $10mil</br>\n"
   utter_faq/FAQ-determining procurement approach and respective approving authorities:
-  - text: >
-        You can refer to the flowchart below which summarised the process to
-        determine which procurement approach to take and the approvals required.
+  - text: "You can refer to the flowchart below which summarised the process to determine\
+      \ which procurement approach to take and the approvals required.\n"
   utter_faq/FAQ-approving contract variations:
-  - text: >
-        The value of the contract variation is used to determine the appropriate
-        variation approving authority in accordance with FOM 520.  </br></br>
-        Director:Up to $30,000 (not applicable for consultancy services)</br>
-        Senior Director:Up to $80,000 (not applicable for consultancy
-        services)</br> Group Director:Up to $150,000</br> DCEO:Up to
-        $500,000</br> CEO:Up to $1mil</br> Chairman:Up to $10mil</br> Board:
-        Exceeding $10mil</br> </br> Variations for consultancy services contract
-        shall minimally be approved by Group Director. For contracts with
-        approved procurement value above $80,000, variations with no change to
-        the contract sum (e.g. changes to contractual terms and conditions,
-        extension of completion date, changes to payment terms and schedule)
-        shall be approved by Group Director or above. </br></br> You can refer
-        to Stage 8-Contract Variations for more details.
+  - text: "The value of the contract variation is used to determine the appropriate\
+      \ variation approving authority in accordance with FOM 520.  </br></br> Director:Up\
+      \ to $30,000 (not applicable for consultancy services)</br> Senior Director:Up\
+      \ to $80,000 (not applicable for consultancy services)</br> Group Director:Up\
+      \ to $150,000</br> DCEO:Up to $500,000</br> CEO:Up to $1mil</br> Chairman:Up\
+      \ to $10mil</br> Board: Exceeding $10mil</br> </br> Variations for consultancy\
+      \ services contract shall minimally be approved by Group Director. For contracts\
+      \ with approved procurement value above $80,000, variations with no change to\
+      \ the contract sum (e.g. changes to contractual terms and conditions, extension\
+      \ of completion date, changes to payment terms and schedule) shall be approved\
+      \ by Group Director or above. </br></br> You can refer to Stage 8-Contract Variations\
+      \ for more details.\n"
   utter_faq/FAQ-seeking approval for G+S with EPV not exceeding $6000:
-  - text: >
-        Please complete the <a target='_blank'
-        href='https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-4.aspx'>'Approval
-        for Small Value Purchase' form</a> and seek your Director's
-        approval.</br></br> You need to assess whether the price quoted is
-        reasonable. This may be based on recent purchases, verbal or written
-        quotes, or any source of reliable information. You do not have to source
-        for three quotes.
+  - text: "Please complete the <a target='_blank' href='https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-4.aspx'>'Approval\
+      \ for Small Value Purchase' form</a> and seek your Director's approval.</br></br>\
+      \ You need to assess whether the price quoted is reasonable. This may be based\
+      \ on recent purchases, verbal or written quotes, or any source of reliable information.\
+      \ You do not have to source for three quotes.\n"
   utter_faq/FAQ-star rate items:
-  - text: >
-        It is typical in some contracts, such as term contracts for facilities
-        management, additions and alterations works or construction contracts,
-        for the contract to be structured based on a Schedule of Rates (SOR).
-        The SOR lists the unit prices of items needed for the works. As and when
-        works are required, the cost of the works is extracted from and built up
-        according to the unit prices listed in the SOR.  However, certain items
-        may not be listed in the contract’s SOR. These are typically known as
-        “star rate” items.
+  - text: "It is typical in some contracts, such as term contracts for facilities\
+      \ management, additions and alterations works or construction contracts, for\
+      \ the contract to be structured based on a Schedule of Rates (SOR). The SOR\
+      \ lists the unit prices of items needed for the works. As and when works are\
+      \ required, the cost of the works is extracted from and built up according to\
+      \ the unit prices listed in the SOR.  However, certain items may not be listed\
+      \ in the contract’s SOR. These are typically known as “star rate” items.\n"
   utter_faq/FAQ-late hardcopy tender submission:
-  - text: >
-        Whether the hardcopy submission is late, you have to ensure that the
-        acceptance of late hard copy submission does not give rise to unfair
-        practices.  </br></br> You should consider whether the information
-        submitted via the hardcopy submission affects the prices or the proposal
-        submitted via GeBIZ. If the hardcopy submissions are merely supporting
-        documents which contain factual information (e.g. financial statements),
-        there should not be any concerns as tenderers are not able to modify the
-        late submission to their advantage (e.g. to further refine their
-        proposal with the additional time or after having knowledge of the bids
-        published on GeBIZ).  </br></br> The best way to avoid such situation is
-        to mandate a full electronic submission whenever possible.
-  - text: >
-        Whether the hardcopy submission is late, you have to ensure that the
-        acceptance of late hard copy submission does not give rise to unfair
-        practices.  </br></br> You should consider whether the information
-        submitted via the hardcopy submission affects the prices or the proposal
-        submitted via GeBIZ. If the hardcopy submissions are merely supporting
-        documents which contain factual information (e.g. financial statements),
-        there should not be any concerns as tenderers are not able to modify the
-        late submission to their advantage (e.g. to further refine their
-        proposal with the additional time or after having knowledge of the bids
-        published on GeBIZ).  </br></br> The best way to avoid such situation is
-        to mandate a full electronic submission whenever possible.
+  - text: "Whether the hardcopy submission is late, you have to ensure that the acceptance\
+      \ of late hard copy submission does not give rise to unfair practices.  </br></br>\
+      \ You should consider whether the information submitted via the hardcopy submission\
+      \ affects the prices or the proposal submitted via GeBIZ. If the hardcopy submissions\
+      \ are merely supporting documents which contain factual information (e.g. financial\
+      \ statements), there should not be any concerns as tenderers are not able to\
+      \ modify the late submission to their advantage (e.g. to further refine their\
+      \ proposal with the additional time or after having knowledge of the bids published\
+      \ on GeBIZ).  </br></br> The best way to avoid such situation is to mandate\
+      \ a full electronic submission whenever possible.\n"
+  - text: Whether the hardcopy submission is late, you have to ensure that the acceptance
+      of late hard copy submission does not give rise to unfair practices.  </br></br>
+      You should consider whether the information submitted via the hardcopy submission
+      affects the prices or the proposal submitted via GeBIZ. If the hardcopy submissions
+      are merely supporting documents which contain factual information (e.g. financial
+      statements), there should not be any concerns as tenderers are not able to modify
+      the late submission to their advantage (e.g. to further refine their proposal
+      with the additional time or after having knowledge of the bids published on
+      GeBIZ).  </br></br> The best way to avoid such situation is to mandate a full
+      electronic submission whenever possible.
