@@ -1,13 +1,73 @@
 version: "2.0"
+
 stories:
-- story: Story from Conversation ID 5f5c3dd763c0479d92ae715ad95a4658
+
+
+- story: FOM
   steps:
-  - intent: faq/FAQ-using RFP and not tenders
-  - action: utter_faq
-  - action: utter_faq/FAQ-using RFP and not tenders
-  - action: utter_faq/FAQ-using RFP and not tenders
-rules:
-- rule: respond to FAQs
+  - intent: inform_fom
+  - action: action_find_fom
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: FAQ-using RFP and not tender
   steps:
-  - intent: faq
-  - action: utter_faq
+  - intent: FAQ-using RFP and not tenders
+  - action: utter_FAQ-using_RFP_and_not_tenders_1
+  - action: utter_FAQ-using_RFP_and_not_tenders_2
+  - action: utter_FAQ-using_RFP_and_not_tenders_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: FAQ-rules for giving honorarium
+  steps:
+  - intent: FAQ-rules for giving honorarium
+  - action: utter_FAQ-rules_for_giving_honorarium_1
+  - action: utter_FAQ-rules_for_giving_honorarium_2
+  - action: utter_FAQ-rules_for_giving_honorarium_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: FAQ-approval process honorarium
+  steps:
+  - intent: FAQ-approval process honorarium
+  - action: utter_FAQ-approval_process_honorarium_1
+  - action: utter_FAQ-approval_process_honorarium_2
+  - action: utter_FAQ-approval_process_honorarium_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+# - story: Buying specific items first subscription items
+#   steps:
+#   - intent: open_buy_item
+#   - action: Check_list_of_subscription_items
+#   - action: utter_ask_item_cost
+#   - intent: inform_item_cost
+#   - action: 
+#   - checkpoint: check_further_questions
+
+# - story: Buying specific items first non-subscription items
+#   steps:
+#   - intent: open_buy_item
+#   - slot
+#   - action: Check_list_of_subscription_items
+#   - slot_was_set:
+#     -my_slot: 
+#   - action: utter_ask_item_cost
+#   - intent: inform_item_cost
+#   - action: 
+#   - checkpoint: check_further_questions
+  
+- story: further questions
+  steps:
+  - checkpoint: check_further_questions
+  - intent: closing no more question
+  - action: utter_closing_goodbye
+ 
+- story: no further questions
+  steps:
+  - checkpoint: check_further_questions
+  - intent: still have questions
+  - action: utter_ask_away
+
+  
