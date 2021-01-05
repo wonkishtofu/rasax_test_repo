@@ -1,7 +1,256 @@
 version: "2.0"
 
 stories:
+  
+- story: Instruction Manual (IM) on Procurement
+  steps:
+  - intent: g2_IM
+  - action: utter_g2_IM
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Demand Aggregation (DA) Contracts
+  steps:
+  - intent: g3_DAC
+  - action: utter_g3_DAC
+  - action: utter_g3_DAC_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Estimated Procurement Value (EPV)
+  steps:
+  - intent: g4_EPV
+  - action: utter_g4_EPV
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Approved Procurement Value (APV)
+  steps:
+  - intent: g5_APV
+  - action: utter_g5_APV
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Tender Evaluation Committee (TEC)
+  steps:
+  - intent: g6_TEC
+  - action: utter_g6_TEC
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Expenditure authority
+  steps:
+  - intent: g7_expenditure_authority
+  - action: utter_g7_expenditure_authority
+  - action: utter_g7_expenditure_authority_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Approval of expenditure quotations
+  steps:
+  - intent: g8_approve_expenditure_quotations
+  - action: utter_g8_approve_expenditure_quotations
+  - action: utter_g8_approve_expenditure_quotations_1
+  - action: utter_g8_approve_expenditure_quotations_2
+  - action: utter_g8_approve_expenditure_quotations_3
+  - action: utter_g8_approve_expenditure_quotations_4
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Approval of variation of contracts
+  steps:
+  - intent: g9_approve_variation_of_contracts
+  - action: utter_g9_approve_variation_of_contracts
+  - action: utter_g9_approve_variation_of_contracts_1
+  - action: utter_g9_approve_variation_of_contracts_2
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Aprroval of revenue quotations
+  steps:
+  - intent: g10_approve_revenue_quotations
+  - action: utter_g10_approve_revenue_quotations
+  - action: utter_g10_approve_revenue_quotations_1
+  - action: utter_g10_approve_revenue_quotations_2
+  - action: utter_g10_approve_revenue_quotations_3
+  - action: utter_g10_approve_revenue_quotations_4
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Letter of Acceptance (LOA)
+  steps:
+  - intent: g11_letter_of_acceptance
+  - action: utter_g11_letter_of_acceptance
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: GPA/FTA covered tenders
+  steps:
+  - intent: g12_procurement_cover
+  - action: utter_g12_procurement_cover
+  - action: utter_g12_procurement_cover_1
+  - action: utter_g12_procurement_cover_2
+  - action: utter_g12_procurement_cover_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: World Trade Organisation - Agreement on Government Procurement (WTO-GPA)
+  steps:
+  - intent: g13_WTO
+  - action: utter_g13_WTO
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Free Trade Agreement (FTA)
+  steps:
+  - intent: g14_FTA
+  - action: utter_g14_FTA
+  - action: utter_g14_FTA_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: 2-Stage Tendering
+  steps:
+  - intent: g15_2_stage_tendering
+  - action: utter_g15_2_stage_tendering
+  - action: utter_g15_2_stage_tendering_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Consortium
+  steps:
+  - intent: g16_consortium
+  - action: utter_g16_consortium
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Debarment
+  steps:
+  - intent: g17_debarment
+  - action: utter_g17_debarment
+  - action: utter_closing
+  - checkpoint: check_further_questions
 
+- story: Novation
+  steps:
+  - intent: g18_novation
+  - action: utter_g18_novation
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+  
+- story: Security Deposit (SD)
+  steps:
+  - intent: g19_security_deposit
+  - action: utter_g19_security_deposit
+  - action: utter_g19_security_deposit_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Selective Tender (SD)
+  steps:
+  - intent: g20_selective_tender
+  - action: utter_g20_selective_tender
+  - action: utter_g20_selective_tender_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Liquidated damage (LD)
+  steps:
+  - intent: g21_liquidated_damages
+  - action: utter_g21_liquidated_damages
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Price-Quality Method (PQM)
+  steps:
+  - intent: g22_PQM
+  - action: utter_g22_PQM
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Quality-Fee selection method (QFM)
+  steps:
+  - intent: g23_QFM
+  - action: utter_g23_QFM
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Public Sector Panel of Consultants (PSPC) 
+  steps:
+  - intent: g24_PSPC
+  - action: utter_g24_PSPC
+  - action: utter_g24_PSPC_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Request for Information (RFI)
+  steps:
+  - intent: g25_RFI
+  - action: utter_g25_RFI
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Request for Proposal (RFP)
+  steps:
+  - intent: g26_RFP
+  - action: utter_g26_RFP
+  - action: utter_g26_RFP_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Small Value Purchase (glossary_27)
+  steps:
+  - intent: g27_svp
+  - action: utter_g27_svp
+  - action: utter_g27_svp_1
+  - action: utter_g27_svp_2
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Quotation
+  steps:
+  - intent: g28_quotation
+  - action: utter_g28_quotation
+  - action: utter_g28_quotation_1
+  - action: utter_g28_quotation_2
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Tender
+  steps:
+  - intent: g29_ITT
+  - action: utter_g29_ITT
+  - action: utter_g29_ITT_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Mandatory DA contracts
+  steps:
+  - intent: g30_mandatory_DA_contracts
+  - action: utter_g30_mandatory_DA_contracts
+  - action: utter_g30_mandatory_DA_contracts_1
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Special Procurement Procedures
+  steps:
+  - intent: g31_special procurement procedures
+  - action: utter_g31_special procurement procedures
+  - action: utter_g31_special procurement procedures_1
+  - action: utter_g31_special procurement procedures_2
+  - action: utter_closing
+  - checkpoint: check_further_questions
+  
+- story: Emergency procurement
+  steps:
+  - intent: g32_emergency procurement
+  - action: utter_g32_emergency procurement
+  - action: utter_g32_emergency procurement_1
+  - action: utter_g32_emergency procurement_2
+  - action: utter_g32_emergency procurement_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
 
 - story: FOM
   steps:
@@ -37,26 +286,52 @@ stories:
   - action: utter_closing
   - checkpoint: check_further_questions
 
-# - story: Buying specific items first subscription items
-#   steps:
-#   - intent: open_buy_item
-#   - action: Check_list_of_subscription_items
-#   - action: utter_ask_item_cost
-#   - intent: inform_item_cost
-#   - action: 
-#   - checkpoint: check_further_questions
+- story: check_item
+  steps:
+  - intent: check_item
+  - action: action_check_item
+  - action: utter_closing
+  - checkpoint: check_further_questions
 
-# - story: Buying specific items first non-subscription items
-#   steps:
-#   - intent: open_buy_item
-#   - slot
-#   - action: Check_list_of_subscription_items
-#   - slot_was_set:
-#     -my_slot: 
-#   - action: utter_ask_item_cost
-#   - intent: inform_item_cost
-#   - action: 
-#   - checkpoint: check_further_questions
+- story: open with cost 
+  steps:
+  - intent: item_cost
+  - action: action_check_item
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: all_information
+  steps:
+  - intent: all_information
+  - action: action_check_item
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Buying normal items
+  steps:
+  - intent: open_buy_item
+  - action: action_check_item_obi
+  - intent: item_cost
+  - action: action_check_item
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Buying special items helpful
+  steps:
+  - intent: open_buy_item
+  - action: action_check_item_obi
+  - intent: helpful
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Buying special items unhelpful
+  steps:
+  - intent: open_buy_item
+  - action: action_check_item_obi
+  - intent: unhelpful
+  - action: utter_other_questions
+  - intent: nevermind
+  - action: utter_reply_nvm 
   
 - story: further questions
   steps:
@@ -70,4 +345,8 @@ stories:
   - intent: still have questions
   - action: utter_ask_away
 
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
   
