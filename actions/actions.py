@@ -94,7 +94,7 @@ class Action_check_items(Action):
                     if dic["entity"]=="items":
                         item=dic["value"]
                         if dic["value"] in special_items["special_items"].tolist():
-                            dispatcher.utter_message(text= f"{item} is a special item that uses a special procedure. Please...")
+                            dispatcher.utter_message(text= f"{item} is a special item.please follow the template provided: ")
                     elif dic["entity"] =="cost":
                         if pax==0:
                             to_append=float(re.findall(r'\d+', dic["value"])[0])
@@ -146,6 +146,28 @@ class Action_check_items_obi(Action):
                         dispatcher.utter_message(text= "How much does it cost in total?") 
         else:
            dispatcher.utter_message(text= "Sorry did not understand what you were saying, could you try saying it in another way?")  
+                    
+        return []
+    
+class Action_check_department(Action):
+    def name(self) -> Text:
+        return "action_check_department"
+    #to better manage the differenct messages to be send out for different cost
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        #condition on intents
+        intent_name=tracker.latest_message["intent"]["name"]
+        df_departments=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/departments.csv")
+        #see if randomly put item is a special item dispatch the appropriate message
+        #check the buy item and item cost conversation flow.
+        if intent_name=="contact_officer_1":
+            df_filtered=df_departments[df_departments["department"]==tracker.latest_message['entities'][0]["value"]]
+            officer_name=df_filtered["officer_name"].values[0]
+            officer_email=df_filtered["officer_email"].values[0]
+            dispatcher.utter_message(text=f"please contact {officer_name} at {officer_email} with the questions. thanks!")
+        else:
+            dispatcher.utter_message(text="Sorry, i did not understand what you say, please be more specific.")
                     
         return []
 # class Action_multiple_utterance(Action):
