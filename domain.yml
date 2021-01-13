@@ -33,14 +33,29 @@ intents:
 - g21_liquidated_damages
 - g17_debarment
 - g19_security_deposit
+- g33_minimum_opening_period
+- g34_calling_direct_contract
+- g35_subscription_exemption
+- g36_approve_contract_extension
+- up_to_30k
+- up_to_80k
+- beyond_80k
 - FAQ-using RFP and not tenders
 - FAQ-rules for giving honorarium
 - FAQ-approval process honorarium
+- falls_under
+- does_not_fall_under
+- under_dc
+- not_under_dc
+- falls under gpa fta
+- does not fall under gpa fta
 - faq
 - inform_fom
 - greet
 - still have questions
 - closing no more question
+- contact_officer_0
+- contact_officer_1
 - check_item
 - item_cost
 - all_information
@@ -49,6 +64,7 @@ intents:
 - unhelpful
 - nevermind
 - nlu_fallback
+- still have questions no need officer
 entities:
 - subject
 - context
@@ -57,6 +73,7 @@ entities:
 - cost
 - pax
 - fom
+- department
 responses:
   utter_fallback:
   - text: "Sorry, i didn't understand the question, could you ask it in a different\
@@ -76,6 +93,35 @@ responses:
     - payload: I need clarifications with the Procurement Manager
       title: I need clarifications with the Procurement Manager
     text: Do you have any further questions?
+  utter_ask_department:
+  - buttons:
+    - payload: PPG
+      title: PPG
+    - payload: CUDG
+      title: CUDG
+    - payload: HR & Comms (under CDG)
+      title: HR & Comms (under CDG)
+    - payload: AUDG
+      title: AUDG
+    - payload: LSAG
+      title: LSAG
+    - payload: Investment (Under CDG)
+      title: Investment (Under CDG)
+    - payload: ISGG
+      title: ISGG
+    - payload: SPG
+      title: SPG
+    - payload: DSG
+      title: DSG
+    - payload: DCG
+      title: DCG
+    - payload: URAA
+      title: URAA
+    - payload: Finace, Legal, Corporate Services, OE(under CDG)
+      title: Finace, Legal, Corporate Services, OE(under CDG)
+    - payload: IA
+      title: IA
+    text: Which department are you from??
   utter_other_questions:
   - text: Hmmm try asking me more specific questions
   utter_reply_nvm:
@@ -368,6 +414,109 @@ responses:
   utter_g32_emergency procurement_3:
   - text: "In addition, it is not required to seek approval to carry out Direct Contracting\
       \ for Emergency Procurement situations.\n"
+  utter_g33_minimum_opening_period:
+  - text: The minimum opening period for open quotation shall be 7 working days, including
+      the day on which the quotation is called. The closing day shall be on a working
+      day
+  utter_g33_minimum_opening_period_1:
+  - text: There is no limited quotation(including direct contracting). However, if
+      this is the case, care to provide sufficient time for suppliers to prepare and
+      submit quotation. (Usually around 3 working days!)
+  utter_g33_minimum_opening_period_2:
+  - text: "For open tender, we will need to publish for a minimum opening period of\n\
+      \ (a) 14 days for non GPA or FTA covered tenders OR\n (b) 25 days for covered\
+      \ tenders IF the 3 conditions are met\n 1. the tender is published on GeBiz\n\
+      \ 2. tender documentations made available on GeBIZ\n 3. full electronic submissions\
+      \ are accepted via GeBiz."
+  utter_g33_minimum_opening_period_3:
+  - text: For limited tender, it is the same as limited quotation, no minimum opening
+      period, but give sufficient time for suppliers to prepare tender submissions!
+      For full information covering more than 30 days, click at the link below and
+      refer to (R6.2.2)[https://intranet.mof.gov.sg/portal/TENDER-OPENING-PERIOD.aspx]
+  utter_g34_calling_direct_contract:
+  - buttons:
+    - payload: Yes, it falls under the standard conditions
+      title: It falls under the standard conditions
+    - payload: It does not fall under the standard conditions
+      title: No, it does not fall under the standard conditions
+    text: Does the procurement falls under any of the standard conditions allowed
+      in IM under (S4 R12.1)[https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/TENDER-PROCEDURES-LIMITED-TENDER.aspx]
+      or (R13.4)[https://intranet.mof.gov.sg/portal/IM/Themes/Procurement/Stage-4-Sourcing/Topics/DIRECT-CONTRACTING-PROCEDURES.aspx]?
+  utter_g34_buttons:
+  - buttons:
+    - payload: This is under direct contracting
+      title: No tenders were received in an open tender; or no tenders conform to
+        the essential requirements of the tender; or the tenders submitted have been
+        colusive
+    - payload: This is under direct contracting
+      title: For goods and services that can be supplied only by a particular supplier
+    - payload: This is under direct contracting
+      title: For additional goods or services to be procured from original supplier
+    - payload: This is under direct contracting
+      title: For reasons of extreme urgency brought about by unforeseen and urgent
+        events
+    - payload: This is under direct contracting
+      title: For prototypes or a first product or service
+    - payload: This is under direct contracting
+      title: For goods purchased on a commodity market
+    - payload: This is under direct contracting
+      title: For purchases made under exceptionally advantageous conditions that only
+        arise in the very short term (e.g those arising from liquidation)
+    - payload: This is under direct contracting
+      title: The contract is awarded to a winner of a design contest
+    - payload: This is under direct contracting
+      title: For training courses offered by commercial providers
+    - payload: This is under direct contracting
+      title: For subscription of telecommunication services
+    - payload: This is under direct contracting
+      title: For Print and electronic resources(e.g journal, newspaper, magavines)
+    - payload: This is under direct contracting
+      title: For supply of electricity
+    - payload: This is not under direct contracting
+      title: others
+    text: For which context do the procurement falls under, press select 1.
+  utter_g34_GPA:
+  - buttons:
+    - payload: It is covered by WTO-GPA or FTA
+      title: It is covered
+    - payload: It is not covered by WTO-GPA or FTA
+      title: It is not covered
+    text: Is it covered under the WTO-GPA/FTA?
+  utter_g34_allow_dc:
+  - buttons:
+    - payload: I have no further question
+      title: I have no further question
+    - payload: I need clarifications with the Procurement Manager
+      title: I need clarifications with the Procurement Manager
+    text: Direct contracting or limited tender is allowed. Do you have any further
+      questions?
+  utter_g34_not_allow_dc:
+  - buttons:
+    - payload: I have no further question
+      title: I have no further question
+    - payload: I need clarifications with the Procurement Manager
+      title: I need clarifications with the Procurement Manager
+    text: Direct contracting or limited tender is not allowed. Do you have any further
+      questions?
+  utter_g35_subscription_exemption:
+  - text: Subscription of print and electronic resources (e.g journals, newspapers,
+      magazines, databases, periodical etc) is considered a procurement. Direct Contracting
+      is allowed and you can prepare a [2 in 1 expenditure cum award paper](https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-2.aspx).
+  utter_g36_buttons:
+  - buttons:
+    - payload: up_to_30k
+      title: Up to $30,000
+    - payload: up_to_80k
+      title: Between $30,000 to $80,000
+    - payload: beyond_80k
+      title: Beyond $80,000
+    text: Is it covered under the WTO-GPA/FTA?
+  utter_g36_up_to_30k:
+  - text: Director is the approving authority to exercise option up to $30,000.
+  utter_g36_up_to_80k:
+  - text: Senior Director is the approving authority to exercise option up to $80,000.
+  utter_g36_beyond_80k:
+  - text: Group Director and above can approve exercising option for any amount
   utter_faq/FAQ-Government Procuring Entities (GPEs):
   - text: "Government Procuring Entities (GPEs) refer to Ministries, Departments,\
       \ Organs of State and Statutory Boards, buying goods, services and construction\
@@ -1110,3 +1259,4 @@ actions:
 - action_find_fom
 - action_check_item
 - action_check_item_obi
+- action_check_department
