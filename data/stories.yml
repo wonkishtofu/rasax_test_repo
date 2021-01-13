@@ -252,6 +252,84 @@ stories:
   - action: utter_closing
   - checkpoint: check_further_questions
 
+- story: Minimum opening period
+  steps:
+  - intent: g33_minimum_opening_period
+  - action: utter_g33_minimum_opening_period
+  - action: utter_g33_minimum_opening_period_1
+  - action: utter_g33_minimum_opening_period_2
+  - action: utter_g33_minimum_opening_period_3
+  - action: utter_closing
+  - checkpoint: check_further_questions
+
+- story: Direct contracting yy
+  steps:
+  - intent: g34_calling_direct_contract
+  - action: utter_g34_calling_direct_contract
+  - intent: falls_under
+  - action: utter_g34_buttons
+  - intent: under_dc
+  - action: utter_g34_allow_dc
+  - checkpoint: check_further_questions
+
+- story: Direct contracting ny
+  steps:
+  - intent: g34_calling_direct_contract
+  - action: utter_g34_calling_direct_contract
+  - intent: does_not_fall_under
+  - action: utter_g34_GPA
+  - intent: falls under gpa fta
+  - action: utter_g34_allow_dc
+  - checkpoint: check_further_questions
+
+- story: Direct contracting nn
+  steps:
+  - intent: g34_calling_direct_contract
+  - action: utter_g34_calling_direct_contract
+  - intent: does_not_fall_under
+  - action: utter_g34_GPA
+  - intent: does not fall under gpa fta
+  - action: utter_g34_not_allow_dc
+  - checkpoint: check_further_questions
+  
+- story:  supscription exemption
+  steps:
+  - intent: g35_subscription_exemption
+  - action: utter_g35_subscription_exemption
+  - action: utter_closing
+  - checkpoint: check_further_questions   
+ 
+- story:  Approve extension of contract
+  steps:
+  - intent: g36_approve_contract_extension 
+  - action: utter_g36_buttons
+  - checkpoint: check_g36_answers
+ 
+- story: extension of contract up to 30k
+  steps:
+  - checkpoint: check_g36_answers
+  - intent: up_to_30k
+  - action: utter_g36_up_to_30k
+  - action: utter_closing
+  - checkpoint: check_further_questions 
+
+
+- story: extension of contract from 30k up to 80k
+  steps:
+  - checkpoint: check_g36_answers
+  - intent: up_to_80k
+  - action: utter_g36_up_to_80k
+  - action: utter_closing
+  - checkpoint: check_further_questions 
+  
+- story: extension of contract beyond 80k
+  steps:
+  - checkpoint: check_g36_answers
+  - intent: beyond_80k
+  - action: utter_g36_beyond_80k
+  - action: utter_closing
+  - checkpoint: check_further_questions 
+
 - story: FOM
   steps:
   - intent: inform_fom
@@ -333,17 +411,25 @@ stories:
   - intent: nevermind
   - action: utter_reply_nvm 
   
-- story: further questions
+- story: no further questions
   steps:
   - checkpoint: check_further_questions
   - intent: closing no more question
   - action: utter_closing_goodbye
  
-- story: no further questions
+- story: further questions
   steps:
   - checkpoint: check_further_questions
   - intent: still have questions
   - action: utter_ask_away
+
+- story: contact officer
+  steps:
+  - checkpoint: check_further_questions
+  - intent: contact_officer_0
+  - action: utter_ask_department
+  - intent: contact_officer_1
+  - action: action_check_department
 
 - story: greet
   steps:
