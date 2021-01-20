@@ -1,0 +1,27 @@
+version: "2.0"
+nlu:
+- lookup: items
+  examples: |
+    - gas
+    - water
+    - drinks
+    - mail
+    - cable
+    - cables
+    - cabling
+    - pipes
+    - pipe
+    - piping
+    - telecommunication
+    - electrical cables
+    - food
+    - dinner
+    - lunch
+    - desks
+    - desk
+    - chair
+    - chairs
+    - furniture
+    - furnitures
+    - laptops
+    - laptop

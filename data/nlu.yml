@@ -15,7 +15,7 @@ nlu:
     - hey there!
     - good morning
     - hi there!
-    - moorning
+    - morning
     - hi there!!!!
     - good evening
     - evening!
@@ -28,7 +28,7 @@ nlu:
     - Hello :)
     - Halp me
     - hello :D
-    - hello here. today is 6th october
+    - hello here
     - heyhey
     
 
@@ -51,19 +51,26 @@ nlu:
 
 - intent: contact_officer_1
   examples: |
-    -[PPG]{"entity":"department"}
-    -[CUDG]{"entity":"department"}
+    -[PPG]{"entity":"group"}
+    -[CUDG]{"entity":"group"}
+    -[AUDG]{"entity":"group"}
+    -[LSAG]{"entity":"group"}
+    -[ISGG]{"entity":"group"}
+    -[SPG]{"entity":"group"}
+    -[DSG]{"entity":"group"}
+    -[DCG]{"entity":"group"}
+    -[URAA]{"entity":"group"}
+    -[IA]{"entity":"group"}
+
+- intent: contact_officer_2
+  examples: |
+    -[CDG]{"entity":"group"}
+
+- intent: contact_officer_3
+  examples: |
     -[HR & Comms (under CDG)]{"entity":"department"}
-    -[AUDG]{"entity": "department"}
-    -[LSAG]{"entity": "department"}
     -[Investment (Under CDG)]{"entity": "department"}
-    -[ISGG]{"entity": "department"}
-    -[SPG]{"entity": "department"}
-    -[DSG]{"entity": "department"}
-    -[DCG]{"entity": "department"}
-    -[URAA]{"entity": "department"}
     -[Finance, Legal, Corporate Services, OE(under CDG)]{"entity":"department"}
-    -[IA]{"entity": "department"}
 
 - intent: falls_under
   examples: |
@@ -73,6 +80,7 @@ nlu:
 - intent: does_not_fall_under
   examples: |
     - No, it [does not fall]{"entity":"context"} under those [standard conditions]{"entity":"subject"}
+    - No, it [does not fall]{"entity":"context"} under the [standard conditions]{"entity":"subject"}
     - No, the [standard conditions]{"entity":"subject"} are [not met]{"entity":"context"}
     - No, the procurement [does not fall]{"entity":"context"} under the [standard conditions]{"entity":"subject"} allowed in IM.
 
@@ -90,13 +98,13 @@ nlu:
 - intent: falls under gpa fta
   examples: |
     - It [falls under]{"entity":"context"} [WTO-GPA or FTA]{"entity":"subject"}
-    - It is [covered by]{"entity":"context"} [WTO-GPA or FTA]]{"entity":"subject"}
+    - It is [covered by]{"entity":"context"} [WTO-GPA or FTA]{"entity":"subject"}
     - It is [covered under]{"entity":"context"} [WTO-GPA or FTA] 
  
 - intent: does not fall under gpa fta
   examples: |
     - It [does not falls under]{"entity":"context"} the [WTO-GPA or FTA]{"entity":"subject"}
-    - It is [not covered by]{"entity":"context"} [WTO-GPA or FTA]]{"entity":"subject"}
+    - It is [not covered by]{"entity":"context"} [WTO-GPA or FTA]{"entity":"subject"}
     - It is [not covered under]{"entity":"context"} [WTO-GPA or FTA] 
     
 - intent: g2_IM
@@ -136,6 +144,8 @@ nlu:
     - How do I do my request for proposal?
     - When to do request for proposal?
     - I am not entirely sure if the purchase meets outcome-based requirements, what should i do
+    - RFP
+    - when to do RFP
     
     
 - intent: g28_quotation
@@ -157,17 +167,28 @@ nlu:
     - What are the mandatory DA contracts?
     - When is it mandatory to use DA contracts?
     - Is my purchase counted under mandatory DA contracts?
+    - when do i have to use mandatory DA contracts?
     
 - intent: g31_special procurement procedures
   examples: |
     - what are some special procurement procedures?
     - When to do special procurement procedures?
+    - What are some items listed under special procurement procedures
+    - What are some items that requires special procurement procedures
+    - What are some special items
+    - what are some special items with different procurement procedures
+    - What are some items that requires special procurement 
+    - What are some items listed under special procurement
+    
     
 - intent: g32_emergency procurement
   examples: |
     - What constitutes an emergency procurement?
     - Emergency procurement
-    
+    - I want to know about emergency procurement procedures
+    - Must i use GeBiz for emergencies?
+    - I want to know about emergency procurement.
+    - Should i seek approval for emergency procurement?
 - intent: g3_DAC
   examples: |
     - What are Demand Aggregation Contracts?
@@ -175,7 +196,7 @@ nlu:
     - What are demand aggregation contracts?
     - What is a DAC?
     - Meaning of DAC
-    - Demand Aggreagation Contracts
+    - Demand Aggregation Contracts
     - Is what i am buying under Demand Aggregation Contracts?
     - Tell me about DAC
     - I want to know what is DAC
@@ -332,15 +353,19 @@ nlu:
     - What is the price-quality method (PQM) about?
     - When to use PQM
     - Considerations before using PQM
+    - What is PQM for
+    -
     
 - intent: g23_QFM
   examples: |
     - What is the quality-fee selection method (QFM)?
+    - QFM
+    - Quality-Fee Selection
     
 - intent: g33_minimum_opening_period
   examples: |
     - minimum opening period
-    - openning period after site briefing
+    - opening period after site briefing
     - opening period
     - tender opening period
 
@@ -377,28 +402,56 @@ nlu:
 - intent: FAQ-using RFP and not tenders
   examples: |
     - Since Request for Proposal (RFP) gives more flexibility, can I opt to use only RFP and not tenders?
+    - Can i use only RFP and not tenders?
+    - Can i use RFP without tenders?
     
 - intent: FAQ-rules for giving honorarium
   examples: |
     - We intend to give an honorarium to a guest speaker for a conference. Would we have to follow the rules in the IM on Procurement?
-
+    - Giving honorarium
+    - I want to know about giving honorarium
+    - honorarium
+    - what is honorarium?
+    - what to note for giving honorarium
 - intent: FAQ-approval process honorarium
   examples: |
     - How is the approval process for honorarium?
-    
+    - What are the conditions for honorarium?
+    - When can i accept honorarium? 
+    - What should i do after accepting honorarium
+    - What to do after accepting an honorarium
+    - what to note for receiving honorarium
+    - receviing honorarium
 - intent: faq/FAQ-Government Procuring Entities (GPEs)
   examples: |
     - Which are the Government Procuring Entities (GPEs)?
+    - GPEs
+    - What is GPEs
+    - What are Government procuring entities
+    - What are GPEs
+    - Government procuring entities
+    
 - intent: faq/FAQ-approving award of quotation
   examples: |
     - Who can approve award of the quotation?
+    - Who are the relevant people to approve quotation?
+    - Quotation approval
+    
 - intent: faq/FAQ-approving award of tender
   examples: |
     - Who can approve award of the tender?
+    - Information on Tender Approving Authority
+    - TAA
+    - Tender approving authority
+    - Who to look for for tender approval?
+    - Tenders Board
     
 - intent: faq/FAQ-approving exercise of option
   examples: |
     - Who can approve exercise of option?
+    - Who to look for to approve execising of option
+    - Approving authority to exercise option
+    - Information on approval to excercise option
 - intent: faq/FAQ-difference between period contract and framework agreement
   examples: |
     - What is the difference between Period Contract and Framework Agreement?
@@ -477,6 +530,9 @@ nlu:
 - intent: faq/FAQ-choosing between Direct Contracting and Limited Tender or Quotation
   examples: |
     - How do I choose between Direct Contracting and Limited Tender or Quotation if I have strong reasons not to call an open Tender or Quotation?
+    - Considerations for choosing direct contracting or limited tender
+    - Considerations for choosing direct contracting or limited quotation
+    
 
 - intent: faq/FAQ-need min. opening period for tenderers invited to bid
   examples: |
@@ -610,6 +666,11 @@ nlu:
 - intent: faq/FAQ-approve limited quotation or tender or direct contracting
   examples: |
     - Who can approve calling of limited quotation/tender or Direct Contracting?
+    - approval of limited quotation
+    - approval of tender
+    - approval of direct contracting
+    - Who can approve limited quotation
+    - who can approve limited tender
 
 - intent: faq/FAQ-approval to further reduce the minimum tender opening period
   examples: |
@@ -665,7 +726,7 @@ nlu:
   examples: |
     - If a tenderer has placed a nominal bid price (e.g. $1) on GeBIZ and submitted the actual bid price in the attached documents (e.g. Price Schedule), is approval for bid amendment required to reflect the actual bid price on GeBIZ?
 
-- intent: faq/FAQ-accept withdrawal of qualitfications
+- intent: faq/FAQ-accept withdrawal of qualifications
   examples: |
     - A tenderer had proposed qualifications to the proposal (e.g. changes to the Conditions of Contract(COC)) and subsequently withdraws these qualifications after clarifications were sought. Are we allowed to accept the withdrawal of these qualifications, and if so, is approval from AO (Bid Amendment) required?
 
@@ -816,31 +877,9 @@ nlu:
     - The total expenditure is ($3000)(cost) what should i do?
     - The total spending will be ($3000)(cost) what should i do?
     - my expenditure is $3000 what should i do?
-- lookup: items
-  examples: |
-    - gas
-    - water
-    - drinks
-    - mail
-    - cable
-    - cables
-    - cabling
-    - pipes
-    - pipe
-    - piping
-    - telecommunication
-    - electrical cables
-    - food
-    - dinner
-    - lunch
-    - desks
-    - desk
-    - chair
-    - chairs
-    - furniture
-    - furnitures
-    - laptops
-    - laptop
+#- lookup: items
+#  files: |
+#    - data\items_list.yml
  
 - intent: open_buy_item
   examples: |

@@ -272,6 +272,16 @@ stories:
   - action: utter_g34_allow_dc
   - checkpoint: check_further_questions
 
+- story: Direct contracting yn
+  steps:
+  - intent: g34_calling_direct_contract
+  - action: utter_g34_calling_direct_contract
+  - intent: falls_under
+  - action: utter_g34_buttons
+  - intent: not_under_dc
+  - action: utter_g34_not_allow_dc
+  - checkpoint: check_further_questions
+
 - story: Direct contracting ny
   steps:
   - intent: g34_calling_direct_contract
@@ -423,12 +433,22 @@ stories:
   - intent: still have questions
   - action: utter_ask_away
 
-- story: contact officer
+- story: contact officer group
   steps:
   - checkpoint: check_further_questions
   - intent: contact_officer_0
-  - action: utter_ask_department
+  - action: utter_ask_group
   - intent: contact_officer_1
+  - action: action_check_department
+
+- story: contact officer department cdg
+  steps:
+  - checkpoint: check_further_questions
+  - intent: contact_officer_0
+  - action: utter_ask_group
+  - intent: contact_officer_2
+  - action: utter_ask_department
+  - intent: contact_officer_3
   - action: action_check_department
 
 - story: greet
