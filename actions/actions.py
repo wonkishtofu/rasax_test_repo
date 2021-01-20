@@ -81,7 +81,7 @@ class Action_check_items(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #condition on intents
         intent_name=tracker.latest_message["intent"]["name"]
-        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/item_list.csv")
+        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/special_item_list.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         cost_list=[]
         #additional messages to follow guide
@@ -94,7 +94,7 @@ class Action_check_items(Action):
                     if dic["entity"]=="items":
                         item=dic["value"]
                         if dic["value"] in special_items["special_items"].tolist():
-                            dispatcher.utter_message(text= f"{item} is a special item.please follow the template provided: ")
+                            dispatcher.utter_message(text= f"{item} is a special item.please follow the template provided: https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/Procurement%20Forms%20and%20Templates/Procurement-Cycle-Stage-2.aspx")
                     elif dic["entity"] =="cost":
                         if pax==0:
                             to_append=float(re.findall(r'\d+', dic["value"])[0])
@@ -118,8 +118,10 @@ class Action_check_items(Action):
                     total_cost=cost_list[0]*cost_list[1]
                     additional_msg=self.total_cost_message(total_cost)
                     dispatcher.utter_message(text= f"The total cost is {total_cost}. "+additional_msg)    
+                else:
+                    dispatcher.utter_message(text= "Sorry i did not understand the question, check for typos or ask it in another way.") 
         except: 
-            dispatcher.utter_message(text= "Sorry i did not understand the question, try asking it again in another way.") 
+            dispatcher.utter_message(text= "Sorry i did not understand the question, check for typos or ask it in another way.") 
         #for open_buy_item where i need buttons to control conversation flow
                     
         return []
@@ -132,10 +134,10 @@ class Action_check_items_obi(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #condition on intents
         intent_name=tracker.latest_message["intent"]["name"]
-        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/item_list.csv")
+        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/special_item_list.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         #check the buy item and item cost converstaion flow.
-        if intent_name=="open_buy_item":
+        if intent_name=="open_buy_item" and len(tracker.latest_message['entities'])!=0 :
             for dic in tracker.latest_message['entities']:
                 if dic["entity"]=="items":
                     item=dic["value"]
@@ -161,11 +163,11 @@ class Action_check_department(Action):
         df_departments=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/departments.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         #check the buy item and item cost conversation flow.
-        if intent_name=="contact_officer_1":
+        if intent_name=="contact_officer_1" or intent_name=="contact_officer_3":
             df_filtered=df_departments[df_departments["department"]==tracker.latest_message['entities'][0]["value"]]
             officer_name=df_filtered["officer_name"].values[0]
             officer_email=df_filtered["officer_email"].values[0]
-            dispatcher.utter_message(text=f"please contact {officer_name} at {officer_email} with the questions. thanks!")
+            dispatcher.utter_message(text=f"please contact {officer_name} at {officer_email} with the questions. thanks!")           
         else:
             dispatcher.utter_message(text="Sorry, i did not understand what you say, please be more specific.")
                     
