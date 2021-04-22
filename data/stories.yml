@@ -289,7 +289,7 @@ stories:
   - intent: does_not_fall_under
   - action: utter_g34_GPA
   - intent: falls under gpa fta
-  - action: utter_g34_allow_dc
+  - action: utter_g34_not_allow_dc
   - checkpoint: check_further_questions
 
 - story: Direct contracting nn
@@ -299,7 +299,7 @@ stories:
   - intent: does_not_fall_under
   - action: utter_g34_GPA
   - intent: does not fall under gpa fta
-  - action: utter_g34_not_allow_dc
+  - action: utter_g34_allow_dc
   - checkpoint: check_further_questions
   
 - story:  supscription exemption

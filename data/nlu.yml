@@ -26,7 +26,7 @@ nlu:
     - good morning!
     - morning!
     - Hello :)
-    - Halp me
+    - Help me
     - hello :D
     - hello here
     - heyhey
@@ -147,7 +147,6 @@ nlu:
     - RFP
     - when to do RFP
     
-    
 - intent: g28_quotation
   examples: |
     - How do I do quotation?
@@ -157,11 +156,13 @@ nlu:
     - What is ITQ?
     - ITQ
     - What is invitation to quote?
-    -invitation to quote
+    - invitation to quote
 - intent: g29_ITT
   examples: |
     - How do I do tenders?
     - What is ITT?
+    - what is tender?
+    - What should i do when i procure through tender?
 - intent: g30_mandatory_DA_contracts
   examples: |
     - What are the mandatory DA contracts?
@@ -215,6 +216,7 @@ nlu:
     - Tell me about EPV
     - I want to know more about estimated procurement value
     - I want to know more about EPV
+
 - intent: g5_APV
   examples: |
     - What is approved procurement value?
@@ -259,6 +261,7 @@ nlu:
     - Authorities for variation of contracts
     - What to do when there is variation of contracts?
     - I want to know more about variation of contracts
+    - I want to amend contract term
     
 - intent: g10_approve_revenue_quotations
   examples: |
@@ -347,6 +350,8 @@ nlu:
     - What are liquidated damages?
     - Considerations for liquidated damages
     - Important things to know about liquidated damages
+    - What is LD?
+    - Is LD a penalty?
     
 - intent: g22_PQM
   examples: |
@@ -354,7 +359,6 @@ nlu:
     - When to use PQM
     - Considerations before using PQM
     - What is PQM for
-    -
     
 - intent: g23_QFM
   examples: |
@@ -458,29 +462,50 @@ nlu:
 - intent: faq/FAQ-procurement for food catering services
   examples: |
     - I need to procure food catering services. How to go about the procurement?
+    - What to do when procuring food catering services
+    - I want to procure catering services
+    - Procurement for food catering services
 - intent: faq/FAQ-mandatory to book venues with Green mark Certification
   examples: |
     - Is it mandatory to book venues with Green mark Certification?
+    - Must i book venues with green mark?
+    - Must events and functions be held at places with green mark??>?
 
 - intent: faq/FAQ-expenditurepapersendwhere
   examples: |
     - Should I send my expenditure paper to Finance for Dir(Fin)'s support?
+    - When to send my expenditure paper to Finance for director's support?
+    - How do i know when i need Dir(Fin)'s support for expenditure papers?
 
 - intent: faq/FAQ-SVPquotes
   examples: |
     - Is it mandatory to obtain 3 quotes for Small Value Purchase?
+    - Do i need 3 quotes for SVP?
+    - Does SVP require 3 quotes?
+    - Do i need 3 quotes for small value pruchase?
+    - Number of quotes for SVP
 
 - intent: faq/FAQ-awarding proposal with highest score for Price-Quality Evaluation
   examples: |
     - Can I not award the proposal which obtained the highest score for Price-Quality Evaluation?
+    - Must i award the proposal with the highest score?
+    - Must the proposal with the higher score for price quality evaluation always be awarded?
 
 - intent: faq/FAQ-signing formal contract or agreement
   examples: |
     - When do I need to sign formal contract or agreement?
+    - Do i need to sign contract?
+    - Do i need to sign agreement?
+    - When we need to sign agreement?
+    - When i need to sign formal contract?
+    - Do i have to to sign agreement?
+    
 
 - intent: faq/FAQ-Sponsorship subject to IM
   examples: |
     - Sponsorship is subject to IM on Procurement?
+    - Do i need to follow procurement procedure for Sponsorship
+    - Sponsership?
 
 - intent: faq/FAQ-considerations for proc of G+S
   examples: |
@@ -498,34 +523,58 @@ nlu:
   examples: |
     - When constitutes Conflict of Interest?
     - what is a conflict of interest?
-
+    - Conflict of interest
+    - What do i need to know about conflict of interest?
 - intent: faq/FAQ-is purchase (SVP) if below $6000
   examples: |
     - Is it necessary to check the existing bulk tenders if my purchase is below $6,000 or can I treat it as a Small Value Purchase (SVP)?
+    - Do i need to check bulk tenders for SVP?
+    - Is there a need to check existing bulk tenders for SVP?
 
 - intent: faq/FAQ-splitting purchase
   examples: |
     - If I raise a direct PO to supplier A today and raise another direct PO for the same goods to the same supplier 2 days later, am I considered to be splitting purchases?
+    - What is splitting of requirements
+    - Can i split my requirements into smaller quantity?
+    - Is it mandatory to aggregate similar purchases?
 
 - intent: faq/FAQ-procure from another government agency
   examples: |
     - I am procuring from another Government Agency. Is it necessary to call a quotation/tender via GeBIZ if the service is commercially available? 
+    - Do i need to follow procurement procedures when procuring from government agencies?
+    - Insourcing from government agencies
+    - Procuring from government agencies
 
 - intent: faq/FAQ-financial evaluation for EPPU or BCA holders
   examples: |
     - If tenderers have either EPPU or BCA registrations or have both, do I still need to do financial evaluation on the tenderers?
+    - Do i need to do financial evaluation for EPPU registered tenderers?
+    - Do i need to do financial evaluation for BCA registered tenderers?
+    - Are EPPU or BCA registered tenders required to do undergo financial evaluation?
 
 - intent: faq/FAQ-deciding numeric weightage
   examples: |
     - I have already stated my evaluation criteria in the tender documents. Can I decide on the numeric weightage only at the evaluation stage?
+    - Do i state the weightage of the evaluation criteria in the published tender documents?
+    - Do i need to publish the weightage of the quality and price attributes in the tender documents?
 
 - intent: faq/FAQ-Specify budget in tender docs
   examples: |
     - I am given a fixed budget to organise an event. Can I specify my budget in the tender documents?
+    - Should i specify budget in tender docs?
+    - Do budgets need to be specified in tender docs?
+    - Should i specify budget in tender documents?
+    - Do budgets need to be specified in tender documents?
 
-- intent: faq/FAQ-proc with EPV below $70,000
+- intent: faq/FAQ-proc with EPV below $90,000
   examples: |
-    - I have a procurement with Estimated Procurement Value (EPV) that is below $70,000. Can I call a tender instead of a Quotation? Who would be the approving authority for the award?
+    - I have a procurement with Estimated Procurement Value (EPV) that is below $90,000. Can I call a tender instead of a Quotation? Who would be the approving authority for the award?
+    - Can i call a tender for quotation value requirements.
+    - Are we allowed to call a tender if EPV is below 90k.
+    - Are we allowed to call a tender for estimated value within quotation limit.
+    - Can we call a tender for estimated value below quotation threshold.
+
+
 
 - intent: faq/FAQ-choosing between Direct Contracting and Limited Tender or Quotation
   examples: |
@@ -537,131 +586,235 @@ nlu:
 - intent: faq/FAQ-need min. opening period for tenderers invited to bid
   examples: |
     - For limited quotations or tenders where the tenderers are invited to bid, is there still a need to adhere to the minimum opening period of 14 or 25 days stipulated in IM Procurement?
+    - Is there a minimum opening period for limited quotations or tenders?
+    - Is there a minimum opening period for limited quotations?
+    - Is there a minimum opening period for limited tenders?
+    
 
 - intent: faq/FAQ-Limited Tender for sensitive proc
   examples: |
     - We have a procurement which is sensitive in nature and we do not want to reveal details to the public. Can a Limited Tender be called?
+    - What should i do with a tender for sensitive procurement?
+    - What should i if my tender has sensitive requirements?
+    
 
 - intent: faq/FAQ-proc procedure for cash vouchers
   examples: |
     - It is common to purchase cash vouchers as gifts and prizes for URA staff. Since such vouchers are sold at face value, is there still a need to follow the procurement procedures?
+    - Do i need to follow procurement procedures for cash vouchers?
+    - What are the procurement procedure for cash vouchers
+    - procurement procedure for cash vouchers
 
 - intent: faq/FAQ-changes allowed to tender in 2-stage tendering
   examples: |
     - How much changes can be allowed to the tender under 2-Stage tendering?
+    - how much can i revise a tender under 2-stage tendering?
+    - What are the changes allowed for 2-stage tendering?
+
+    
 
 - intent: faq/FAQ-single bid for open quotation or tender
   examples: |
     - I received only 1 bid from an open quotation/tender. Can I award the quotation/tender? How do I evaluate the single bid?
+    - Only 1 bid for quotation or tender?
+    - What should i do when i only receive 1 bid from an open quotation or tender?
+    - What should i do when i only receive 1 bid from an open quotation
+    - What should i do when i only receive 1 bid from an open tender?
+    - How do i evaluate a single bid?
 
 - intent: faq/FAQ-more than 1 bid received but only 1 acceptable
   examples: |
     - If more than 1 bid is received but only 1 of the bids is acceptable, does this constitute a single-bid situation?
+    - When is a single bid situation
+    - Single bid situation
 
-- intent: faq/FAQ-late hardcopy tender submission
+- intent: faq/FAQ-evaluation for late hardcopy tender submission
   examples: |
     - Can late hardcopy submissions be considered for evaluation if tenderer has already submitted their price in GeBIZ before tender closing date?
+    - Should i still consider late hardcopy submissions for evaluation?
+    - Can we accept late hardcopy proposal
+    - acceptance of late hardcopy proposal
+    - acceptance hardcopy submission after tender closing
 
 - intent: faq/FAQ-steps to take when recalling a tender
   examples: |
     - If the Approving Authority does not agree to the recommendation to award the single bid received, what steps can be taken when recalling a tender to increase the likelihood of attracting more bids?
+    - How to increase the likelihood of attracting more bids?
+    - How to attract more tender bids?
+    - How to attract more bids?
 
 - intent: faq/FAQ-in Tender Evaluation Committee (TEC), have friend in bidding company
   examples: |
     - I am in the Tender Evaluation Committee (TEC) and know a friend is working for one of the bidding companies. What should I do?
+    - My friend is in the bidding company
+    - Can i still be in the TEC if my friend is in the bidding company
+    - Is there conflict of interest if my friend is working for one of the tenderers
+    - Is there conflict of interest if my friend is working for one of the vendors
 
 - intent: faq/FAQ-approval for qualification of selective tenders
   examples: |
     - Who can approve the qualification of selective tenders?
+    - Approval for qualification of selective tenders?
 
 - intent: faq/FAQ-Purchase Order for tender proc if already have Letter of Acceptance
   examples: |
     - Is it required to raise a Purchase Order (PO) through GeBIZ for tender procurement when there is already a Letter of Acceptance (LOA) issued to the supplier?
+    - When do we need to raise PO
+    - Do we have to raise PO if LOA is already issued?
+    - Do we need to raise PO if we already have a contract?
+
 
 - intent: faq/FAQ-Purchase Orders (PO) to note
   examples: |
     - I am confused over the different types of POs in GeBIZ. Which are the POs should I take note of?
+    - What are the main POs i should take note of?
+    - What are the main POs to know?
+    - What are the most common POs?
+    - Which are the most common POs?
+    - The most important POs to know?
 
 - intent: faq/FAQ-Acceptable percentage of contract variation to original tender
   examples: |
     - Is there a guideline on the acceptable percentage of contract variation to the original tender APV?
+    - How much of the original tender APV can be changed during contract variation?
+    - Allowable variation to a contract?
 
 - intent: faq/FAQ-contract variation involves an increase in APV
   examples: |
     - I sought expenditure approval for Estimated Procurement Value (EPV) of $100,000 and awarded a tender with Approved Procurement Value (APV) of $90,000. What do I need to do if my contract variation involves an increase in APV to $105,000?
+    - What to do if my APV is not sufficient to cover for the cost of the proposed variations
+    - What to do if my APV is not sufficient to cover for the cost of the variation
+    - Considerations if APV is not sufficient to cover for variation cost.
+    
+- intent: faq/FAQ-assessing additional works
+  examples: |
+    - How do I assess whether the additional works constitute variations to the contract? 
+    - When do i do contract variation?
+    - What are the considerations to assess if the works are allowed under contract variation
 
 - intent: faq/FAQ-novation request from existing contractor
   examples: |
     - What to do if we receive a novation request from the existing contractor?
+    - Receieving novation from existing contractors
+    - What to do with novation requests?
 
 - intent: faq/FAQ-novation required for new company name in existing contract
   examples: |
     - If there is a change in company name of the contracted vendor, is novation required to bring the new company name into effect in an existing contract? 
-    - If there is a change in company name of the contracted vendor, is novation required to bring the new company name into effect in an existing contract?
+    - Do i need novation if there is a change in a company name?
+    - Is novation required for new company name in existing contract?
 
 - intent: faq/FAQ-debarment
   examples: |
     - Does debarment apply to quotation or small value purchase?
+    - Does debarment apply to quotation
+    - Does debarment apply to small value purchase?
+    - Do i need to debar suppliers for quotation
+    - Do i need to debar suppliers for svp?
+    - Do i need to debar suppliers for small value purchase?
 
 - intent: faq/FAQ-expenditure approval for G+S exempted from IM Proc
   examples: |
     - For goods or services exempted from IM Procurement, do I still need to seek expenditure approval?
+    - Do i still need expenditure approval for goods and services under special procurement.
+    - How to seek approval for special procurement
+    - How to seek approval for special items
 
 - intent: faq/FAQ-shorten minimum quotation opening period
   examples: |
     - IM states the minimum quotation opening period is 7 working days but I have a very tight timeline. Can I shorten this period?
+    - Can i shorten the minimum quotation opening period?
+    - Shortening the minimum quotation opening period
+    - Having a shorter minimum quotation opening period than the one stated in IM.
 
 - intent: faq/FAQ-need report if not recommending for no award
   examples: |
     - Do I need to put up any quotation or tender report if I am not recommending for no award?
+    - Do we still need to do quotation or tender report for no award?
+    - Do we still need to do a report for no award?
+    - If i am not recommending for award, do i still need to put up a report?
 
 - intent: faq/FAQ-vendor to commence work before approval of report
   examples: |
     - Can I ask vendor to commence works first prior to approval of the quotation or tender report?
+    - Can vendors start work before approval?
+    - Can vendors start work before approval of quotation
+    - Can vendors start work before approval of tender report?
 
 - intent: faq/FAQ-preparing specifications
   examples: |
     - What are the things to take note when preparing specifications?
+    - Things to take note of when preparing specification
+    - What should i know when preparing specifications
 
 - intent: faq/FAQ-collecting Security Deposits
   examples: |
     - When is it necessary to collect Security Deposit?
+    - Security Deposits
+    - When to collect SD?
+    - When to collect security deposits?
 
 - intent: faq/FAQ-changing Conditions of Contract (COC)
   examples: |
     - Are we allowed to make changes to the Conditions of Contract (COC)?
+    - Can we make changes to COC?
+    - Can we make changes to the Conditions of Contract?
+    - How much of COC are we allowed to change?
+    - How much change can i make to the Conditions of Contract?
 
 - intent: faq/FAQ-guidelines on the cap for limiting liabilities
   examples: |
     - Are there any guidelines on the cap for limiting liabilities? E.g. should it be $x or x% of the contract sum?
+    - Are there any caps on liabilities?
+    - What is the maximum liability?
+
 
 - intent: faq/FAQ-disqualification for bids higher than EPV
   examples: |
     - Some bids received are higher than EPV. Do we need to disqualify these tenderers? 
+    - Should we disqualify bids higher than EPV?
+    - What to do when i receive bids higher than EPV?
 
 - intent: faq/FAQ-considered procurement if collab with other govt agencies
   examples: |
     - When URA collaborate with other government agency, is it considered a procurement? Do I have to follow procurement rules? How can I formalise the collaborations with other GPEs?
+    - Is collaboration with other government agency considered procurement?
+    - Do i have to follow procurement rules when collaborating with other government agencies?
+    - Do i have to follow procurement rules when collaborating with other government entities?
 
 - intent: faq/FAQ-minimum quotation opening period applicable to Request for Quotation
   examples: |
     - Is the minimum quotation opening period applicable to Request for Quotation (RFQ) against framework agreements?
+    - Do minimum quotation opening period apply to RFQ?
+    - Do minimum quotation opening period apply to Request for Quotation?
 
 - intent: faq/FAQ-appoint_suppliers_panel
   examples: |
     - I am calling a tender with the intention of appointing a panel of suppliers. Must I use the EPV of the entire tender to derive the financial category requirement for each of the supplier?"
+    - How do i determine the financial category if i am appointing a panel 
 
 - intent: faq/FAQ-minimum number of suppliers to alert when publishing quotation or tender
   examples: |
     - Is there a minimum number of suppliers that I must alert when publishing the quotation or tender?
+    - What is the minimum number of suppliers to alert when publishing tender
+    - What is the minimum number of suppliers to alert when publishing quotation
+    - Is there a minimum number of suppliers to alert when tendering?
+    
 
 - intent: faq/FAQ-other platforms to conduct procurement
   examples: |
     - If I can use other platforms to alert suppliers about the procurement opportunities, can we use other platforms to conduct the procurement instead of GeBIZ?
+    - Is GeBiz the only platform for government procurement?
+    - Must i only use Gebiz to conduct procurement?
+    - Can we use other platforms instead of GeBiz to conduct procurement?
 
 - intent: faq/FAQ-alerting of procurement opportunity
   examples: |
     - Would alerting a specific group of potential suppliers of a published procurement opportunity be construed as favouring them?
+    - Can i alert a specific group of potential suppliers?
+    - Am i allowed to alert a group of potential suppliers on procurement opportunities?
+    - Do i need to alert suppliers after the quotation is published on GeBiz?
+    - Do i need to alert suppliers after the tender is published?
 
 - intent: faq/FAQ-approve limited quotation or tender or direct contracting
   examples: |
@@ -675,77 +828,144 @@ nlu:
 - intent: faq/FAQ-approval to further reduce the minimum tender opening period
   examples: |
     - I have a very tight timeline for my event to be called via an open tender. Can I seek approval to further reduce the minimum tender opening period?
+    - Can I seek approval to further reduce the minimum tender opening period?
+    - What can i do if i have a tight timeline for procurement?
+    - What if my requirement is critical and we don't have much time?
+
 
 - intent: faq/FAQ-non GPA or FTA-covered tenders minimum tendering period
   examples: |
     - Why is it that non GPA or FTA-covered tenders can have a minimum tendering period of only 14 days?
+    - Why does non GPA or FTA covered tenders have a longer minimum tendering period?
+    - Why does non GPA covered tenders have a longer minimum tendering period?
+    - Why does non FTA covered tenders have a longer minimum tendering period?
+    
 
 - intent: faq/FAQ-bringing forward tender closing date with all tenderers submitting their proposals
   examples: |
-    - If we have a limited tender involving x number of tenderers and before the closing date and time, we already know that all x tenderers have submitted their proposals.  Under this scenario, can we bring forward the tender closing date and open the tenders received?
+    - If we have a limited tender involving x number of tenderers and before the closing date and time, we already know that all x tenderers have submitted their proposals. Under this scenario, can we bring forward the tender closing date and open the tenders received?
+    - Can i shorten the tender closing date?
+    - Are we allowed to shorten the tender closing date?
+    - Are we allowed to change the tender closing date to an earlier date?
+    - Can we close the tender earlier since all tenderers have submitted their proposal?
+    - When all the tenderers have submitted their proposal, can we close the tender earlier?
 
 - intent: faq/FAQ-waiving liquidated damages (LDs)
   examples: |
     - What are the types of procurements where liquidated damages (LDs) can be waived?
+    - Procurement types where LDs can be waived
+    - Procurement types where liquidated damages can be waived
+    - What are the type of procurements where LDs should not be imposed
+    - Type of procurements where LDs should not be imposed,
 
 - intent: faq/FAQ-deciding if qualified bids should be allowed
   examples: |
     - What are some of the considerations you should take when deciding if qualified bids should be allowed?
+    - What are the considerations to take note of before deciding if qualified bid should be allowed?
+    - What do i need to take note of when allowing qualified bids?
+    - What should i consider before allowing qualified bid?
 
 - intent: faq/FAQ-differentiating tenderers with different qualification degrees or aspects of the Tender
   examples: |
     - If we allow qualified bids, how can we differentiate between tenderers who all come in with qualifications but to different degree and/or to different aspects of the Tender?
+    - How to evaluate tender when tenderers quoted different variation to the tender documents
+    - What to do when tenderers quoted different qualification to the tender documents
+    - What to do when tenderers quoted different changes to the tender document.
+
 
 - intent: faq/FAQ-invoking of Limited Tender during extreme urgency
   examples: |
     - Limited Tender can be invoked for reasons of extreme urgency. What is meant by extreme urgency?
+    - What is counted as extreme urgency?
+    - When is it an extreme urgency situation?
+    - How should i understand extreme urgency?
 
 - intent: faq/FAQ-request tenderers to extend their offer validity more than once
   examples: |
     - I have previously requested for extension of tender offer validity but I need more time to evaluate the tender/quotation. Can I request tenderers to extend their offer validity more than once?
+    - How many times can i get tenderers to extend their quotation validity
+    - How many times can i get tenderers to extend their tender validity
+    - Is there a maximum number of times can i get tenderers to extend their tender validity?
+    - Is there a maximum number of times can i get tenderers to extend their tender validity?
+    - Extend validity offer
+    - Extension of validity offer
+    - What is the number of times allowed for extension of validity offer
 
 - intent: faq/FAQ-bid amendment
   examples: |
     - When can a bid amendment be considered?
     - When to do bid amendment
     - When to make bid amendment
+    - Considerations before doing bid amendment
+    - What should i consider before making bid amendments?
 
 - intent: faq/FAQ-level of approval for bid amendment
   examples: |
     - What level of approval is required for bid amendment?
+    - Who should i look for to approve bid amendment?
+    - Who are the approving authorities for bid amendment?
+    - Who can approve bid amentment?
 
 - intent: faq/FAQ-using bid amendment to correct bid error
   examples: |
     - If a bid error leads to a tenderer's non-compliance to a critical criterion, could bid amendment still be considered to correct the error?
+    - Can bid amendment be considered when a bid error occurs?
+    - Can bid amendment be used to rectify a bid error
+    - Can bid amendment be used to correct a bid error?
+    - Can i use bid amendment to solve a bid error?
 
-- intent: faq/FAQ-tenderer doesn't provide evidence to support error was genuine
+- intent: faq/FAQ-tenderer doesnt provide evidence to support error was genuine
   examples: |
     - If the tenderer fails to provide evidence/ clarifications to support that there has been a genuine error, or the departments assessed that a bid amendment should not be carried out (e.g. as it would give rise to unfairness), what should we do?
+    - If the tenderer fails to provide evidences to support that there has been a genuine error, can i still do bid amendment?
+    - What if i can't ascertain that the error is genuine?
+
 
 - intent: faq/FAQ-nominal bid price
   examples: |
     - If a tenderer has placed a nominal bid price (e.g. $1) on GeBIZ and submitted the actual bid price in the attached documents (e.g. Price Schedule), is approval for bid amendment required to reflect the actual bid price on GeBIZ?
-
+    - Do we need to seek bid amendment approval for nominal bids
+    - Do nominal bids require bid amendment approval?
+    - Do i need to seek bid amendment approval for nominal bids
+    - Nominal bids need amendment approval?
+   
 - intent: faq/FAQ-accept withdrawal of qualifications
   examples: |
     - A tenderer had proposed qualifications to the proposal (e.g. changes to the Conditions of Contract(COC)) and subsequently withdraws these qualifications after clarifications were sought. Are we allowed to accept the withdrawal of these qualifications, and if so, is approval from AO (Bid Amendment) required?
+    - Can tenderer withdraw their deviation to the original tender proposal .
+    - Can tenderer withdraw their additional terms and conditions.
+    - Are tenderers allowed to withdraw their additional terms and conditions after tender closing.
+    - After tender closing, can tenderers still withdraw their additional terms and conditions.
+
 
 - intent: faq/FAQ-bid amendment required to correct error of tenderer not meeting all requirements
   examples: |
     - A tenderer had indicated that they did not fully meet all requirements in their proposal (e.g. via a Statement of Compliance table), but Departments subsequently assessed during the evaluation that the tenderer had actually met all the requirements. Is bid amendment required to correct the bid?
+    - Do we need to do bid amendment if tenderer clarify that they are fully compliant after clarifications
+    - Do we need to do bid amendment if tenderer are suddenly fully compliant after tender closing
 
 - intent: faq/FAQ-difference between 2-Stage tendering and negotiations
   examples: |
     - How is 2-Stage tendering procedure different from carrying out negotiations?
+    - Whats the difference between 2-stage tendering and negotiation procedures
+    - Difference between 2-stage tendering and negotiation procedures
+    - Difference in procedures between 2-stage tendering and negotiation.
+    
 
 - intent: faq/FAQ-unauthorized officer signs contract
   examples: |
     - What happens if an unauthorized officer signs a contract?
+    - What are the consequences when an unauthorized personnel signs a contract?
+    - When unauthorized officer signs a cotnract
 
 - intent: faq/FAQ-date of award taken as date of establishing contract
   examples: |
     - Why is the date of award taken as the date of establishing the contract and not the date of approval by tender/quotation approval authority? 
-    - Why is the date of award taken as the date of establishing the contract and not the date of approval by tender/quotation approval authority?
+    - Why is the date of award the date of approval by tender aprroval authority?
+    - Why is the date of award the date of approval by TAA?
+    - Why is the date of award the date of approval by QAA?
+    - Why is the date of award the date of approval by quotation approval authority? 
+    
 
 - intent: faq/FAQ-case for debarment when terminating contract
   examples: |
@@ -761,18 +981,29 @@ nlu:
 - intent: faq/FAQ-contractor submit own quotes for star rate works
   examples: |
     - Can the contractor submit his own quotes for star rate works?
+    - Contractor submited own quotes for star rate works
+    - Is a contractor allowed to submit his own quotes for star rate works?
+    - Is a contractor allowed to submit his own quotes for works done using star rate?
+    
 
 - intent: faq/FAQ-guidelines for proprietary products
   examples: |
     - Are there any guidelines pertaining to proprietary products?
+    - Guidelines for proprietary products?
+    - What to consider when getting proprietary products?
+    - What to take note of for proprietary products?
 
 - intent: faq/FAQ-star rate items
   examples: |
     - What are "star rate" items?
+    - What are star rate items?
+    - I want to know what is a star rate item
+    - Do you know what are star rate items?
 
 - intent: faq/FAQ-key principles of Government Procurement
   examples: |
     - What are the key principles of Government Procurement?
+    - Key principles of government procurement.
 
 - intent: faq/FAQ-GeBIZ
   examples: |
@@ -786,6 +1017,9 @@ nlu:
 - intent: faq/FAQ-approving expenditure paper
   examples: |
     - Who can approve my expenditure paper?
+    - Who to look for to approve expenditure paper?
+    - Approving authorities for expenditure paper
+    - Guide on approving authorities for incurring expenditure
 
 - intent: faq/FAQ-determining procurement approach and respective approving authorities
   examples: |
@@ -795,6 +1029,8 @@ nlu:
 - intent: faq/FAQ-approving contract variations
   examples: |
     - Who can approve contract variations?
+    - Guidelines on approval of contract variations
+    - Who are the appropriate parties to go for approval of contract variation?
 
 - intent: faq/FAQ-seeking approval for G+S with EPV not exceeding $6000
   examples: |
@@ -803,6 +1039,15 @@ nlu:
 - intent: faq/FAQ-star rates
   examples: |
     - Understand that star rates should not form bulk of the valuation of works in the contract. What is meant by 'bulk' of valuation of contract works or 'substantial' percentage of works being valued as star rate items? What would be the correct quantum to ascertain these?
+    - Any cap to star rates? 
+    - What is the maximum quantum for star rate items? 
+
+- intent: faq/FAQ-is purchase (SVP) if below $6000
+  examples: |
+    - Is it necessary to check the existing bulk tenders if my purchase is below $6,000 or can I treat it as a Small Value Purchase (SVP)?
+- intent: faq/FAQ-need report if not recommending for no award
+  examples: |
+    - Do i need to put up any quotation or tender report if i am not recommedning for no award?
     
 
 
@@ -866,6 +1111,8 @@ nlu:
     - I want to spend [$1000](cost)
     - I want to spend [3000SGD](cost)
     - I need to spend [3000 sgd](cost)
+    - I want to buy [$3000](cost) worth of [chairs](items)
+    - i want to buy [5000 dollars](cost) worth of items
     - The purchase is worth [3000 dollars](cost)
     - What should i do if i have to spend [$50000](cost)
     - Who to look for for approval if i spend more than [$10000](cost) 
@@ -886,6 +1133,7 @@ nlu:
     - I want to buy [gas](items)
     - What do i need to do if i want to buy [gas](items)
     - What do i need to do if i want to buy [desks](items)
+    - i want to buy [10](pax) items
     - [desks]
     - dinner(items)
     - How much does it cost to buy 10 bottles of [water](items)?
@@ -901,6 +1149,8 @@ nlu:
     - Catering [lunch](items) for [100persons](pax)
     - i want to buy 10 [laptop](items) for [10 people](pax)
     - I have to buy [desks](items) for new office
+    - I have to buy [50](pax) desks.
+    - i have to buy lunch for [600](pax) people
 
 - intent: check_item
   examples: |
@@ -932,6 +1182,6 @@ nlu:
     - Its okay, i have no other questions
     - nvm
     - Nevermind
-    - Its okay, i have no further questions
+    - It's okay, i have no further questions
     - nvm i will do something else.
     
