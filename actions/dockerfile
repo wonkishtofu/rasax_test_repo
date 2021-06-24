@@ -1,4 +1,4 @@
-FROM rasa/rasa-sdk:latest
+FROM rasa/rasa-sdk:2.6.0
 
 USER root
 
