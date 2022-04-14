@@ -914,7 +914,7 @@ nlu:
     - Can bid amendment be used to correct a bid error?
     - Can i use bid amendment to solve a bid error?
 
-- intent: faq/FAQ-tenderer doesnt provide evidence to support error was genuine
+- intent: faq/FAQ-tenderer doesn't provide evidence to support error was genuine
   examples: |
     - If the tenderer fails to provide evidence/ clarifications to support that there has been a genuine error, or the departments assessed that a bid amendment should not be carried out (e.g. as it would give rise to unfairness), what should we do?
     - If the tenderer fails to provide evidences to support that there has been a genuine error, can i still do bid amendment?

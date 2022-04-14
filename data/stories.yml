@@ -1,4 +1,4 @@
-version: "2.0"
+﻿version: "2.0"
 
 stories:
   
@@ -430,7 +430,7 @@ stories:
 - story: further questions
   steps:
   - checkpoint: check_further_questions
-  - intent: still have questions
+  - intent: still have questions no need officer
   - action: utter_ask_away
 
 - story: contact officer group
