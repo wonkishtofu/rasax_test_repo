@@ -31,7 +31,7 @@ class Action_FOM(Action):
         
         #condition to read fom expression
         entity_name= tracker.latest_message['entities'][0]["value"]
-        template=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/FOM.csv")
+        template=pd.read_csv("./FOM.csv")
         #template["log"]=entity_name
         #template.to_csv("/Users/User/Desktop/learning/Rasa/test/actions/logs.csv")
 
@@ -81,7 +81,7 @@ class Action_check_items(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #condition on intents
         intent_name=tracker.latest_message["intent"]["name"]
-        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/special_item_list.csv")
+        special_items=pd.read_csv("./special_item_list.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         cost_list=[]
         #additional messages to follow guide
@@ -134,7 +134,7 @@ class Action_check_items_obi(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #condition on intents
         intent_name=tracker.latest_message["intent"]["name"]
-        special_items=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/special_item_list.csv")
+        special_items=pd.read_csv("./special_item_list.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         #check the buy item and item cost converstaion flow.
         if intent_name=="open_buy_item" and len(tracker.latest_message['entities'])!=0 :
@@ -160,7 +160,7 @@ class Action_check_department(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #condition on intents
         intent_name=tracker.latest_message["intent"]["name"]
-        df_departments=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/departments.csv")
+        df_departments=pd.read_csv("./departments.csv")
         #see if randomly put item is a special item dispatch the appropriate message
         #check the buy item and item cost conversation flow.
         if intent_name=="contact_officer_1" or intent_name=="contact_officer_3":
@@ -185,7 +185,7 @@ class Action_check_department(Action):
             # intent_name=tracker.latest_message['response_selector']["default"]["response"]["intent_response_key"]
         # else:
             # intent_name=tracker.latest_message["intent"].get("name")
-        # template=pd.read_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/multiple_utterance.csv")
+        # template=pd.read_csv("./multiple_utterance.csv")
         # #template["log"]=intent_name
         # #template.to_csv("/Users/User/Desktop/learning/Rasa/Consolidated/actions/logs.csv")
         # filtered_template=template[template["intent"]==intent_name]
