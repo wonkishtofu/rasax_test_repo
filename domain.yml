@@ -1,4 +1,4 @@
-﻿session_config:
+session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: false
 intents:
@@ -91,7 +91,7 @@ responses:
   - buttons:
     - payload: I have no further question
       title: I have no further question
-    - payload: I have no further question
+    - payload: Yes, I still have questions
       title: Yes, i still have questions
     - payload: Yes, i still have questions
       title: I need clarifications with the Procurement Manager
@@ -805,7 +805,7 @@ responses:
       then a PO needs to be raised for such downstream purchases. The initial Letter
       of Acceptance was only to formalise the standing arrangement of the period contract
       at the upstream.
-  utter_faq/Purchase Orders(PO) to note:
+  utter_faq/FAQ-Purchase Orders (PO) to note:
   - text: |
         The 2 most commonly used POs are: 
         a) e-Catalogue PO (e-cat PO) 
@@ -1056,7 +1056,7 @@ responses:
       The following must be met before a bid amendment could be considered: 
       a) It is a genuine error; and 
       b) It does not give rise to discriminatory or unfair practices.  Whether the bid amendment affects a tenderer’s compliance with any criterion, even if it is a critical criterion, is immaterial.'
-  utter_faq/FAQ-tenderer doesnt provide evidence to support error was genuine:
+  utter_faq/FAQ-tenderer doesn't provide evidence to support error was genuine:
   - text: |
       If the department cannot ascertain that there is a genuine error or assessed
       that the bid amendment should not be carried out, there is no need to consider
